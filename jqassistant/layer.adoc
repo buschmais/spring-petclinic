@@ -13,11 +13,13 @@ This chapter describes the concepts and constraints related to the layered packa
 @startuml
 skinparam componentStyle uml2
 
-artifact " " as Main <<Main>> <<Artifact>>
-package "{fqn:'org.springframework.samples.petclinic'}" as Root <<Package>>
-package "Layer" as Layer <<Package>><<(+)Layer>>
+artifact "Application Artifact" as Main <<Main>> <<Artifact>> {
+  package "{fqn:'org.springframework.samples.petclinic'}" as Root <<Package>> {
+    package "Layer" as Layer <<Package>><<(+)Layer>>
+  }
+}
 
-Main -> Root :  :CONTAINS
+Main -> Root  :  :CONTAINS
 Root -> Layer : :CONTAINS
 
 @enduml
