@@ -2,8 +2,11 @@ target/*
 .settings/*
 .classpath
 .project
+.factorypath
+.attach_pid*
 .idea
 *.iml
 /target
-
-generated/
+.sts4-cache/
+.vscode
+_site/

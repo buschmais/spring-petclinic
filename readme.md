@@ -27,10 +27,10 @@ The sample application itself is a simple demo for organizing visits of pet owne
 ### Downloading and running the `petclinic` web application
 First, we want to download the source code of the application with Git, build it with Maven (using `mvnw`) and running the embedded web application server `tomcat7`:
 ```
-git clone https://github.com/buschmais/spring-petclinic.git
+git clone https://github.com/jqassistant-demo/spring-petclinic.git
 cd spring-petclinic
 ./mvnw clean install
-./mvnw tomcat7:run
+java -jar target/*.jar
 ```
 You can then access the `petclinic` web application with your browser here: http://localhost:9966/petclinic/
 
