@@ -9,7 +9,7 @@ This README shows you, how you can setup this software project by yourself. If y
 ## Prerequisites
 
 ### Minimum requirements
-* Oracle Java Development Kit with Version >=8 ([download](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html))
+* Oracle Java Development Kit with Version >=8 ([download](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html))
 * Git ([download](https://git-scm.com/downloads))
 
 ### Optional
@@ -61,15 +61,15 @@ This is what it should look like after clicking the button in the upper left cor
 
 Next, you can click on the various labels in the drawer to explore the scanned software data. You can also use the Neo4j guide for jQAssistant (beta) by executing the following command
 ```
-:play http://guides.neo4j.com/jqassistant
+:play https://guides.neo4j.com/jqassistant
 ```
 or by simply clicking this link: http://localhost:7474/browser?cmd=play&arg=http://guides.neo4j.com/jqassistant. The guide will show you some first steps with jQAssistant/Neo4j.
 
-More information e. g. about the scanned Java code can be found in the documentation of jQAssistant: http://buschmais.github.io/jqassistant/doc/1.3.0/#_java_plugin.
+More information e.g. about the scanned Java code can be found in the documentation of jQAssistant: https://jqassistant.github.io/jqassistant/doc/1.8.0/#_java_plugin.
 
 
 ## Taking a look at the self-validating, living architecture documentation
-After the build, you can find the complete architecture documentation in `target/html/index.html`. The documentation is written in [AsciiDoc](http://asciidoc.org/) and  
+After the build, you can find the complete architecture documentation in `target/html/index.html`. The documentation is written in [AsciiDoc](https://asciidoc.org/) and  
 * defines the architecture rules in plain text
 * translates those rules into Cypher (Neo4j's query language)
 * validates the rules by executing the Cypher queries against the actual software

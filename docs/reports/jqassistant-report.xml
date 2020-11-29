@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jqa-report:jqassistant-report xmlns:jqa-report="http://www.buschmais.com/jqassistant/core/report/schema/v1.3">
+<jqa-report:jqassistant-report xmlns:jqa-report="https://www.buschmais.com/jqassistant/core/report/schema/v1.3">
   <group id="default" date="2017-10-27T21:34:11">
     <group id="management:Default" date="2017-10-27T21:34:11">
       <concept id="spring-jmx:ManagedResource">

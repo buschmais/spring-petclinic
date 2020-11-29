@@ -1,5 +1,5 @@
 # jQAssistant demo output for Spring PetClinic #
-jQAssistant ([http://www.jqassistant.org](http://www.jqassistant.org "http://www.jqassistant.org")) is a great tool for scanning  and validating software structures (like Maven projects or Java bytecode). It also brings the fantastic feature of defining all the rules that should be validated within AsciiDoc files. With this approach you'll get a **self-validating living architecture documentation**!
+jQAssistant ([https://www.jqassistant.org](https://www.jqassistant.org "https://www.jqassistant.org")) is a great tool for scanning  and validating software structures (like Maven projects or Java bytecode). It also brings the fantastic feature of defining all the rules that should be validated within AsciiDoc files. With this approach you'll get a **self-validating living architecture documentation**!
 
 The creators of jQAssistant built up a showcase with the [Spring PetClinic project](https://github.com/buschmais/spring-petclinic/) for getting you started very quickly. On this page, you'll find the generated outputs of jQAssistant (also available directly on [GitHub](https://github.com/buschmais/spring-petclinic/tree/master/docs)) for that project. It's meant for people who don't have the time or setup to build the entire project with Java / Maven / GraphViz. 
 
@@ -52,4 +52,4 @@ You'll need yEd to open them. In yEd, you have to select all elements and layout
 **Figure 5: A diagram of some components of the software system, viewed in yEd**
 
 
-For more information, check out the [documentation](http://buschmais.github.io/jqassistant/doc/1.3.0/) or the [project's website](https://jqassistant.org/).
+For more information, check out the [documentation](https://jqassistant.github.io/jqassistant/doc/) or the [project's website](https://jqassistant.org/).
