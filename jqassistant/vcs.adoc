@@ -4,7 +4,20 @@
 
 The rules defined in this document refer to Git.
 
+=== Reports
+
+[[vcs:Authors]]
+[source,cypher,role=concept,reportType="wordcloud"]
+.The authors of this project as word cloud.
+----
+MATCH
+  (author:Author)-[:COMMITTED]->(:Commit)
+RETURN
+  author.email
+----
+
 === Concepts
+
 [[vcs:CurrentBranch]]
 [source,cypher,role=concept]
 .The currently checked-out local branch is labeled with `Current`.
