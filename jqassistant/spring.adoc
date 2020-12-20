@@ -12,10 +12,6 @@ The following constraints are verified:
 - <<spring:ImplementationDependencies>>
 - Package cycles
 
-The following GraphML reports are created:
-
-- <<spring:VirtualDependency.graphml>>
-
 === Overview
 
 The application consists of the following components:

@@ -3,9 +3,6 @@
 == Package
 
 This chapter describes the concepts and constraints related to the package structure.
-The following constraints are verified:
-
-* <<dependency:PackageCycles>>
 
 === Reports
 
