@@ -1,0 +1,20 @@
+# Spins up a jQAssistant Jupyter Notebook container using Neo4j container. The latter mounts the Neo4j/jQAssistant database created by "mvn install" (target/jqassistant/store)
+version: '3'
+services:
+  neo4j:
+    image: neo4j:3.5.24
+    ports:
+      - 7474:7474
+      - 7687:7687
+    environment:
+      - NEO4J_AUTH=none
+    volumes:
+      - ./target/jqassistant/store:/data/databases/graph.db
+  jupyter:
+    image: jqassistant/jupyter-notebook:0.2.0
+    ports:
+      - 8888:8888
+    environment:
+      - NEO4J_URL=http://neo4j:7474
+    volumes:
+      - ./jqassistant/jupyter:/home/jovyan/work
