@@ -40,7 +40,7 @@ RETURN
 
 [[vcs:BranchesMustBeSynchronized]]
 [source,cypher,role=constraint]
-.The branches "violations" and "jqa-remote" must include the latest commit (HEAD) of "master" (i.e. merges are required).
+.The branches "violations", "jqa-remote" and "heads/jqa-testimpactanalysis" must include the latest commit (HEAD) of "master", i.e. merges are required from master into these branches.
 ----
 MATCH
   (master:Branch),
