@@ -8,19 +8,16 @@ This chapter describes the concepts and constraints related to the layered packa
 
 [[layer:Layer]]
 .The application has a layered structure. Each layer is represented by a package located in the root package and labeled as `Layer`.
-[plantuml,layer,role=concept]
+[source,cypher,role=concept]
 ----
-@startuml
-skinparam componentStyle uml2
-
-artifact " " as Main <<Main>> <<Artifact>>
-package "{fqn:'org.springframework.samples.petclinic'}" as Root <<Package>>
-package "Layer" as Layer <<Package>><<(+)Layer>>
-
-Main -> Root :  :CONTAINS
-Root -> Layer : :CONTAINS
-
-@enduml
+MATCH
+  (:Main:Artifact)-[:CONTAINS]->(root:Package)-[:CONTAINS]->(layer:Package)
+WHERE
+  root.fqn = "org.springframework.samples.petclinic"
+SET
+  layer:Layer
+RETURN
+  layer as Layer
 ----
 
 

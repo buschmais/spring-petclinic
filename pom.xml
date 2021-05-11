@@ -32,7 +32,7 @@
     <spring-format.version>0.0.25</spring-format.version>
 
     <!-- jQAssistant -->
-    <jqassistant.version>1.8.0</jqassistant.version>
+        <jqassistant.version>1.9.1</jqassistant.version>
   </properties>
 
   <dependencies>
@@ -294,9 +294,8 @@
               -->
               <groups>
                 <group>default</group>
-                <!--
+                                <!-- Required by the jQAssistant Dashboard plugin, see declaration in plugin dependencies -->
                 <group>jqassistant-dashboard:Default</group>
-                -->
               </groups>
 
               <scanIncludes>
@@ -315,7 +314,7 @@
             <!--
             <uri>bolt://localhost:7687</uri>
             <username>neo4j</username>
-            <password>admin</password>
+                        <password>jqassistant</password>
             <embedded>
                 <listenAddress>localhost</listenAddress>
                 <httpPort>7474</httpPort>
@@ -324,34 +323,38 @@
             -->
           </store>
         </configuration>
+                <!-- Additional plugins are provided as dependencies to the jQAssistant Maven Plugin -->
         <dependencies>
+                    <!-- Allows using PlantUML diagrams as concepts/constraints -->
           <dependency>
             <groupId>org.jqassistant.contrib.plugin</groupId>
             <artifactId>jqassistant-plantuml-rule-plugin</artifactId>
-            <version>1.8.0</version>
+                        <version>1.9.0</version>
           </dependency>
+                    <!-- Creates word clouds from concept/constraint results -->
           <dependency>
             <groupId>org.jqassistant.contrib.plugin</groupId>
-            <artifactId>jqassistant-dashboard-plugin</artifactId>
-            <version>1.8.0</version>
+                        <artifactId>jqassistant-wordcloud-report-plugin</artifactId>
+                        <version>1.9.0</version>
           </dependency>
+                    <!-- Adds the jQAssistant Dashboard, available as http://localhost:7474/jqassistant/dashboard after running mvn jqassistant:server -->
           <dependency>
             <groupId>org.jqassistant.contrib.plugin</groupId>
-            <artifactId>jqassistant-wordcloud-report-plugin</artifactId>
-            <version>1.8.0</version>
+                        <artifactId>jqassistant-dashboard-plugin</artifactId>
+                        <version>1.9.0</version>
           </dependency>
-          <!-- Optional
+                    <!-- Provides APOC functions -->
           <dependency>
               <groupId>org.jqassistant.contrib.plugin</groupId>
               <artifactId>jqassistant-apoc-plugin</artifactId>
-              <version>1.8.0</version>
+                        <version>1.9.0</version>
           </dependency>
+                    <!-- Provides graph algorithms -->
           <dependency>
               <groupId>org.jqassistant.contrib.plugin</groupId>
               <artifactId>jqassistant-graph-algorithms-plugin</artifactId>
-              <version>1.8.0</version>
+                        <version>1.9.0</version>
           </dependency>
-          -->
         </dependencies>
       </plugin>
     </plugins>
