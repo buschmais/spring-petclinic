@@ -1,16 +1,15 @@
 [[spring:Default]]
-[role=group,includesGroups="spring-boot:Strict",includesConstraints="spring:*,dependency:PackageCycles",includesConcepts="spring:*"]
+[role=group,includesGroups="spring-boot:Strict",includesConstraints="spring:*",includesConcepts="spring:*"]
 == Spring
 
 The following constraints are verified:
 
 - Default spring rules as provided by the https://github.com/buschmais/jqa-spring-plugin[jQAssistant Spring Plugin].
   These cover allowed dependencies between Controllers, Services and Repositories
-- <<spring:ControllerMustBeLocatedInWebLayer>>
-- <<spring:ServiceMustBeLocatedInServiceLayer>>
-- <<spring:RepositoryMustBeLocatedInRepositoryLayer>>
+- <<spring:ControllerNameSuffix>>
+- <<spring:ServiceNameSuffix>>
+- <<spring:RepositoryNameSuffix>>
 - <<spring:ImplementationDependencies>>
-- Package cycles
 
 === Overview
 
@@ -94,14 +93,14 @@ public class MyController {
 }
 ----
 
-[[spring:ControllerMustBeLocatedInWebLayer]]
-[source,cypher,role=constraint,requiresConcepts="spring-component:Controller,layer:Layer"]
-.Controllers must be located in the layer named 'web'.
+[[spring:ControllerNameSuffix]]
+[source,cypher,role=constraint,requiresConcepts="spring-component:Controller"]
+.The name of a Spring controller must be suffixed with `Controller`.
 ----
 MATCH
   (controller:Spring:Controller)
 WHERE NOT
-  (:Layer{name:"web"})-[:CONTAINS*]->(controller)
+  controller.name ends with "Controller"
 RETURN
   controller as Controller
 ----
@@ -133,14 +132,14 @@ public class MyServiceImpl implements MyService {
 }
 ----
 
-[[spring:ServiceMustBeLocatedInServiceLayer]]
-[source,cypher,role=constraint,requiresConcepts="spring-component:Service,layer:Layer"]
-.Services must be located in the layer named 'service'.
+[[spring:ServiceNameSuffix]]
+[source,cypher,role=constraint,requiresConcepts="spring-component:Service"]
+.The name of a Spring service must be suffixed with `Service`.
 ----
 MATCH
   (service:Spring:Service)
 WHERE NOT
-  (:Layer{name:"service"})-[:CONTAINS*]->(service)
+  service.name ends with "Service"
 RETURN
   service as Service
 ----
@@ -209,14 +208,14 @@ public class JdbcFooRepositoryImpl implements Repository {
     }
 ----
 
-[[spring:RepositoryMustBeLocatedInRepositoryLayer]]
-[source,cypher,role=constraint,requiresConcepts="spring-component:Repository,layer:Layer"]
-.Repositories must be located in the layer named 'repository'.
+[[spring:RepositoryNameSuffix]]
+[source,cypher,role=constraint,requiresConcepts="spring-component:Repository"]
+.The name of a Spring repository must be suffixed with `Repository`.
 ----
 MATCH
   (repository:Spring:Repository)
 WHERE NOT
-  (:Layer{name:"repository"})-[:CONTAINS*]->(repository)
+  repository.name ends with "Repository"
 RETURN
   repository as Repository
 ----
@@ -227,27 +226,27 @@ include::jQA:Rules[constraints="spring*:*"]
 
 === Reports
 
-[[spring:ComponentDiagram]]
-[source,cypher,role=concept,requiresConcepts="spring-component:Component",reportType="plantuml-class-diagram"]
-.Actual usage dependencies between Spring components, i.e. controller, service and repository implementations.
+[[spring:InhjectablesDiagram]]
+[source,cypher,role=concept,requiresConcepts="spring-injection:Injectable",reportType="plantuml-class-diagram"]
+.Actual usage dependencies between Spring injectables, e.g. controller, service and repository implementations.
 ----
 MATCH
-  (componentPackage:Package)-[:CONTAINS]->(component:Spring:Component)
+  (injectablePackage:Package)-[:CONTAINS]->(injectable:Spring:Injectable)
 OPTIONAL MATCH
   (injectedTypePackage:Package)-[:CONTAINS]->(injectedType:Type),
-  (component)-[declares:DECLARES]->(field:Field)-[:OF_TYPE]->(injectedType),
-  (dependency:Component)-[extends:EXTENDS|IMPLEMENTS*]->(injectedType)
+  (injectable)-[declares:DECLARES]->(field:Field)-[:OF_TYPE]->(injectedType),
+  (dependency:Injectable)-[extends:EXTENDS|IMPLEMENTS*0..]->(injectedType)
 RETURN
   *
 ----
 
 [[spring:SequenceDiagram]]
-[source,cypher,role=concept,requiresConcepts="spring-component:Component,java:VirtualInvokes",reportType="plantuml-sequence-diagram"]
+[source,cypher,role=concept,requiresConcepts="spring-component:Controller,java:VirtualInvokes",reportType="plantuml-sequence-diagram"]
 .Sequence diagram demonstrating sequence between Spring Components.
 ----
 MATCH
-  (:Spring:Component{name:"VisitController"})-[:DECLARES]->(method{name:"processNewVisitForm"}),
-  (:Spring:Component)-[:DECLARES]->(other:Method),
+  (:Spring:Controller{name:"VisitController"})-[:DECLARES]->(method{name:"processNewVisitForm"}),
+  (:Type)-[:DECLARES]->(other:Method),
   sequence=shortestPath((method)-[:INVOKES|VIRTUAL_INVOKES*]->(other))
 RETURN
   sequence

@@ -8,6 +8,8 @@ The following constraints are verified:
 
 === Constraints
 
+NOTE: The following constraint creates violations by intention.
+
 [[model:JpaEntityInModelPackage]]
 .All JPA entities must be located in packages named "model".
 [source,cypher,role=constraint,requiresConcepts="jpa2:Entity"]
