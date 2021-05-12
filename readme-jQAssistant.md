@@ -9,8 +9,7 @@ This repository provides an example setup for the integration of jQAssistant int
 
 * Java Development Kit 8
 * [Maven 3.6](https://maven.apache.org/)
-
-## Preparation
+* Optional: To produce nice looking diagrams, install GraphViz ([download](https://www.graphviz.org/download/))
 
 * Clone this repository to your local machine
 * Build the project using `mvn verify -DskipTests`
