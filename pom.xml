@@ -329,7 +329,7 @@
           <dependency>
             <groupId>org.jqassistant.contrib.plugin</groupId>
             <artifactId>jqassistant-plantuml-rule-plugin</artifactId>
-            <version>1.9.0</version>
+            <version>1.10.0-SNAPSHOT</version>
           </dependency>
           <!-- Creates word clouds from concept/constraint results -->
           <dependency>
