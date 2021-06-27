@@ -335,7 +335,7 @@
           <dependency>
             <groupId>org.jqassistant.contrib.plugin</groupId>
             <artifactId>jqassistant-wordcloud-report-plugin</artifactId>
-            <version>1.10.0-SNAPSHOT</version>
+            <version>1.10.0</version>
           </dependency>
           <!-- Adds the jQAssistant Dashboard, available as http://localhost:7474/jqassistant/dashboard after running mvn jqassistant:server -->
           <dependency>
@@ -347,13 +347,13 @@
           <dependency>
             <groupId>org.jqassistant.contrib.plugin</groupId>
             <artifactId>jqassistant-apoc-plugin</artifactId>
-            <version>1.10.0-SNAPSHOT</version>
+            <version>1.10.0</version>
           </dependency>
           <!-- Provides graph algorithms -->
           <dependency>
             <groupId>org.jqassistant.contrib.plugin</groupId>
             <artifactId>jqassistant-graph-algorithms-plugin</artifactId>
-            <version>1.10.0-SNAPSHOT</version>
+            <version>1.10.0</version>
           </dependency>
         </dependencies>
       </plugin>
