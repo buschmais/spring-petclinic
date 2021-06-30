@@ -31,7 +31,6 @@ The following rule groups are executed during a build:
 - <<spring:Default>>
 - <<model:Default>>
 - <<business:Default>>
-- <<management:Default>>
 - <<test:Default>>
 - <<vcs:Default>>
 
