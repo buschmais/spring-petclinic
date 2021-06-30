@@ -57,7 +57,7 @@ The following sections describe restrictions on dependencies between these compo
 ==== General
 
 [[spring:ImplementationDependencies]]
-[source,cypher,role=constraint,requiresConcepts="spring-component:AnnotatedInjectables"]
+[source,cypher,role=constraint,requiresConcepts="spring-injection:Injectable"]
 .There must be no direct dependencies between Spring injectables, i.e. only dependencies to interfaces are allowed.
 ----
 MATCH
