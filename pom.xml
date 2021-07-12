@@ -311,16 +311,9 @@
         </executions>
         <configuration>
           <store>
-            <!--
             <uri>bolt://localhost:7687</uri>
             <username>neo4j</username>
-                        <password>jqassistant</password>
-            <embedded>
-                <listenAddress>localhost</listenAddress>
-                <httpPort>7474</httpPort>
-                <boltPort>7687</boltPort>
-            </embedded>
-            -->
+            <password>jqassistant</password>
           </store>
         </configuration>
         <!-- Additional plugins are provided as dependencies to the jQAssistant Maven Plugin -->
