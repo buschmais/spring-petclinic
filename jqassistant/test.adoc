@@ -1,0 +1,24 @@
+[[test:Default]]
+[role=group,includesConstraints="test:*,junit:IgnoreWithoutMessage"]
+== Tests
+
+The following test rules apply:
+
+- <<test:TestMethodWithoutAssertion>>
+- All @Ignore annotations must provide a message
+
+=== Constraints
+
+[[test:TestMethodWithoutAssertion]]
+[source,cypher,role=constraint,requiresConcepts="junit4:TestMethod,assertj:AssertMethod,spring-test-web:Assert"]
+.All test methods must perform at least one assertion (within a call hierarchy of max. 3 steps).
+----
+MATCH
+  (testType:Test:Type)-[:DECLARES]->(testMethod:Test:Method)
+WHERE
+  NOT (testMethod)-[:INVOKES*..3]->(:Method:Assert)
+RETURN
+  testType AS DeclaringType,
+  testMethod AS Method
+----
+

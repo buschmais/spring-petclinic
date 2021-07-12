@@ -1,0 +1,24 @@
+[[model:Default]]
+[role=group,includesConstraints="model:*"]
+== JPA Model
+
+The following constraints are verified:
+
+- <<model:JpaEntityInModelPackage>>
+
+=== Constraints
+
+NOTE: The following constraint creates violations by intention.
+
+[[model:JpaEntityInModelPackage]]
+.All JPA entities must be located in packages named "model".
+[source,cypher,role=constraint,requiresConcepts="jpa2:Entity"]
+----
+MATCH
+  (package:Package)-[:CONTAINS]->(entity:Jpa:Entity)
+WHERE
+  package.name <> "model"
+RETURN
+  entity AS EntityInWrongPackage
+----
+

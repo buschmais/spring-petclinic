@@ -1,0 +1,254 @@
+[[spring:Default]]
+[role=group,includesGroups="spring-boot:Strict",includesConstraints="spring:*",includesConcepts="spring:*"]
+== Spring
+
+The following constraints are verified:
+
+- Default spring rules as provided by the https://github.com/buschmais/jqa-spring-plugin[jQAssistant Spring Plugin].
+  These cover allowed dependencies between Controllers, Services and Repositories
+- <<spring:ControllerNameSuffix>>
+- <<spring:ServiceNameSuffix>>
+- <<spring:RepositoryNameSuffix>>
+- <<spring:ImplementationDependencies>>
+
+=== Overview
+
+The application consists of the following components:
+
+[plantuml,class-diagram]
+....
+package UI <<Frame>> {
+  class MyController
+}
+
+package Logic <<Frame>> {
+  interface MyService
+  MyService <|-- MyServiceImpl
+}
+
+package Persistence <<Frame>> {
+  interface FooRepository
+  interface SpringDataFooRepository
+  FooRepository <|-- SpringDataFooRepository
+  FooRepository <|-- JpaFooRepositoryImpl
+  FooRepository <|-- JdbcFooRepositoryImpl
+}
+
+MyController --> MyService : uses
+MyServiceImpl --> FooRepository : uses
+
+hide members
+....
+
+* UI
+** Controller implementations
+* Logic
+** Service interfaces and implementations
+* Persistence
+** Repository interfaces and implementations
+*** Spring Data (interface declaration only)
+*** JPA
+*** JDBC
+
+=== Project Constraints
+
+The following sections describe restrictions on dependencies between these components.
+
+==== General
+
+[[spring:ImplementationDependencies]]
+[source,cypher,role=constraint,requiresConcepts="spring-injection:Injectable"]
+.There must be no direct dependencies between Spring injectables, i.e. only dependencies to interfaces are allowed.
+----
+MATCH
+  (type:Spring:Injectable)-[:DECLARES]->(:Method)-[:INVOKES]->(:Method)<-[:DECLARES]-(otherType:Spring:Injectable)
+WHERE
+  type <> otherType
+  and not otherType:Interface
+RETURN DISTINCT
+  type as Dependent, otherType as InvalidDependency
+----
+
+==== UI
+
+The server side UI implementation is based on Spring MVC controllers:
+
+[source,java]
+.Example controller
+----
+@Controller
+@RequestMapping("/resource")
+public class MyController {
+
+    private final MyService service;
+
+    @Autowired
+    public MyController(MyService myService) {
+        this.myService = myService;
+    }
+
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public String get() {
+    }
+}
+----
+
+[[spring:ControllerNameSuffix]]
+[source,cypher,role=constraint,requiresConcepts="spring-component:Controller"]
+.The name of a Spring controller must be suffixed with `Controller`.
+----
+MATCH
+  (controller:Spring:Controller)
+WHERE NOT
+  controller.name ends with "Controller"
+RETURN
+  controller as Controller
+----
+
+==== Logic
+
+The business logic consists of services which are defined by interfaces and implemented by classes annotated with @Service:
+
+[source,java]
+.Example service interface
+----
+public interface MyService {
+    Collection<Foo> findFoos() throws DataAccessException;
+}
+----
+
+[source,java]
+.Example service implementation
+----
+@Service
+public class MyServiceImpl implements MyService {
+
+    private FooRepository fooRepository;
+
+    @Autowired
+    public ServiceImpl(FooRepository fooRepository) {
+        this.fooRepository = fooRepository;
+    }
+}
+----
+
+[[spring:ServiceNameSuffix]]
+[source,cypher,role=constraint,requiresConcepts="spring-component:Service"]
+.The name of a Spring service must be suffixed with `Service`.
+----
+MATCH
+  (service:Spring:Service)
+WHERE NOT
+  service.name ends with "Service"
+RETURN
+  service as Service
+----
+
+==== Persistence
+
+Repositories provide access to the database and are defined by interfaces (one per model element):
+
+[source,java]
+.Example repository interface
+----
+public interface FooRepository {
+    Collection<Foo> findFoos() throws DataAccessException;
+}
+----
+
+There are three options to provide or implement a repository:
+
+[source,java]
+.Example Spring Data repository
+----
+public interface SpringDataFooRepository extends FooRepository, Repository<Foo, Integer> {
+
+    @Override
+    @Query("SELECT foo FROM Foo ORDER BY foo.name")
+    List<Foo> findFoos() throws DataAccessException;
+}
+----
+
+[source,java]
+.Example JPA repository
+----
+@Repository
+public class JpaFooRepositoryImpl implements FooRepository {
+
+    @PersistenceContext
+    private EntityManager em;
+
+    @Override
+    @SuppressWarnings("unchecked")
+    public List<Foo> findFoos() {
+        return this.em.createQuery("SELECT foo FROM Foo ORDER BY foo.name").getResultList();
+    }
+----
+
+[source,java]
+.Example JDBC repository
+----
+@Repository
+public class JdbcFooRepositoryImpl implements Repository {
+
+    private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
+
+    @Autowired
+    public JdbcRepositoryImpl(DataSource dataSource) {
+        this.namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(dataSource);
+    }
+
+    @Override
+    public List<Foo> findFoos() throws DataAccessException {
+        Map<String, Object> params = new HashMap<>();
+        return this.namedParameterJdbcTemplate.query(
+            "SELECT id, name FROM foo ORDER BY name",
+            params,
+            BeanPropertyRowMapper.newInstance(Foo.class));
+    }
+----
+
+[[spring:RepositoryNameSuffix]]
+[source,cypher,role=constraint,requiresConcepts="spring-component:Repository"]
+.The name of a Spring repository must be suffixed with `Repository`.
+----
+MATCH
+  (repository:Spring:Repository)
+WHERE NOT
+  repository.name ends with "Repository"
+RETURN
+  repository as Repository
+----
+
+=== Default Constraints
+
+include::jQA:Rules[constraints="spring*:*"]
+
+=== Reports
+
+[[spring:InhjectablesDiagram]]
+[source,cypher,role=concept,requiresConcepts="spring-injection:Injectable",reportType="plantuml-class-diagram"]
+.Actual usage dependencies between Spring injectables, e.g. controller, service and repository implementations.
+----
+MATCH
+  (injectablePackage:Package)-[:CONTAINS]->(injectable:Spring:Injectable)
+OPTIONAL MATCH
+  (injectedTypePackage:Package)-[:CONTAINS]->(injectedType:Type),
+  (injectable)-[declares:DECLARES]->(field:Field)-[:OF_TYPE]->(injectedType),
+  (dependency:Injectable)-[extends:EXTENDS|IMPLEMENTS*0..]->(injectedType)
+RETURN
+  *
+----
+
+[[spring:SequenceDiagram]]
+[source,cypher,role=concept,requiresConcepts="spring-component:Controller,java:VirtualInvokes",reportType="plantuml-sequence-diagram"]
+.Sequence diagram demonstrating sequence between Spring Components.
+----
+MATCH
+  (:Spring:Controller{name:"VisitController"})-[:DECLARES]->(method{name:"processNewVisitForm"}),
+  (:Type)-[:DECLARES]->(other:Method),
+  sequence=shortestPath((method)-[:INVOKES|VIRTUAL_INVOKES*]->(other))
+RETURN
+  sequence
+----
+

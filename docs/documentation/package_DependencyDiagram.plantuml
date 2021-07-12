@@ -1,0 +1,21 @@
+@startuml
+skinparam componentStyle uml2
+  folder "org.springframework.samples:spring-petclinic:war:4.2.6-SNAPSHOT" {
+      [org.springframework.samples.petclinic.repository.jpa] <<Container Directory File Java Package>> as n1568
+      [org.springframework.samples.petclinic.repository] <<Container Directory File Java Layer Package>> as n1378
+      [org.springframework.samples.petclinic.repository.jdbc] <<Container Directory File Java Package>> as n1379
+      [org.springframework.samples.petclinic.web] <<Container Directory File Java Layer Package>> as n1768
+      [org.springframework.samples.petclinic] <<Container Directory File Java Package Root>> as n1065
+      [org.springframework.samples.petclinic.service] <<Container Directory File Java Layer Package>> as n1657
+      [org.springframework.samples.petclinic.model] <<Container Directory File Java Layer Package>> as n1066
+      [org.springframework.samples.petclinic.util] <<Container Directory File Java Package>> as n1722
+      [org.springframework.samples.petclinic.repository.springdatajpa] <<Container Directory File Java Package>> as n1629
+  }
+
+n1768 --> n1657 : DEPENDS_ON
+n1657 --> n1378 : DEPENDS_ON
+n1657 --> n1066 : DEPENDS_ON
+n1378 --> n1066 : DEPENDS_ON
+n1768 --> n1066 : DEPENDS_ON
+
+@enduml

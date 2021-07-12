@@ -1,0 +1,46 @@
+:toc: left
+:numbered:              // Number all section headers
+:sectnumlevels: 5       // Number up to section level 5
+:toclevels: 2           // Table of content should have only two levels
+
+= Spring PetClinic Coding Rules
+
+This document describes coding rules for the Spring PetClinic.
+
+NOTE: The rules defined in this and all included documents are for demonstration purposes only and should be considered as work in progress.
+Feedback and enhancements are welcome, you're invited to create an issue or pull-request on https://github.com/buschmais/spring-petclinic[GitHub].
+
+NOTE: For rendering of embedded diagrams https://www.graphviz.org[Graphviz] needs to be installed and available via the system path.
+
+TIP: GraphML reports may be viewed using https://www.yworks.com/en/products/yfiles/yed/[yEd].
+After opening a file you should apply a layout, e.g. menu:Layout[Hierarchical].
+
+== Summary
+
+// Includes a summary about all executed constraints and concepts including their status and description
+include::jQA:Summary[constraints="*", concepts="*"]
+
+== CI Build
+
+The following rule groups are executed during a build:
+
+[[default]]
+[role=group,includesGroups="maven:Default,component:Default,spring:Default,model:Default,business:Default,test:Default,vcs:Default"]
+- <<maven:Default>>
+- <<component:Default>>
+- <<spring:Default>>
+- <<model:Default>>
+- <<business:Default>>
+- <<test:Default>>
+- <<vcs:Default>>
+
+include::maven.adoc[]
+include::component.adoc[]
+include::spring.adoc[]
+include::model.adoc[]
+include::business.adoc[]
+include::test.adoc[]
+include::vcs.adoc[]
+include::spring-test.adoc[]
+include::assertj.adoc[]
+

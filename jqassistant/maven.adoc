@@ -1,0 +1,20 @@
+[[maven:Default]]
+[role=group,includesConcepts="maven:*"]
+== Maven
+
+This chapter describes the rules related to Maven.
+
+=== Reports
+
+[[maven:ProjectArtifactDependencyDiagram]]
+[source,cypher,role=concept,reportType="plantuml-component-diagram"]
+.Diagram about project artifact dependencies.
+----
+MATCH
+  (:Maven:Project)-[:CREATES]->(artifact:Artifact)
+OPTIONAL MATCH
+  (artifact)-[dependsOn:DEPENDS_ON]->(:Artifact)<-[:CREATES]-(:Maven:Project)
+RETURN
+  *
+----
+

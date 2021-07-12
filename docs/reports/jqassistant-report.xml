@@ -1,0 +1,1704 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jqa-report:jqassistant-report xmlns:jqa-report="https://www.buschmais.com/jqassistant/core/report/schema/v1.3">
+  <group id="default" date="2017-10-27T21:34:11">
+    <group id="management:Default" date="2017-10-27T21:34:11">
+      <concept id="spring-jmx:ManagedResource">
+        <description>Labels all types annotated with "org.springframework.jmx.export.annotation.ManagedResource" with "Spring" and "ManagedResource".</description>
+        <result>
+          <columns count="1">
+            <column primary="true">ManagedResource</column>
+          </columns>
+          <rows count="1">
+            <row>
+              <column name="ManagedResource">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/util/CallMonitoringAspect.class"></source>
+                <value>org.springframework.samples.petclinic.util.CallMonitoringAspect</value>
+              </column>
+            </row>
+          </rows>
+        </result>
+        <status>success</status>
+        <severity level="3">minor</severity>
+        <duration>328</duration>
+      </concept>
+      <concept id="spring-jmx:ManagedOperation">
+        <description>Labels all methods annotated with "org.springframework.jmx.export.annotation.ManagedAttribute" with "Spring" and "ManagedOperation".</description>
+        <result>
+          <columns count="1">
+            <column primary="true">ManagedOperation</column>
+          </columns>
+          <rows count="1">
+            <row>
+              <column name="ManagedOperation">
+                <element language="Java">Method</element>
+                <source name="/org/springframework/samples/petclinic/util/CallMonitoringAspect.class"></source>
+                <value>org.springframework.samples.petclinic.util.CallMonitoringAspect#void reset()</value>
+              </column>
+            </row>
+          </rows>
+        </result>
+        <status>success</status>
+        <severity level="3">minor</severity>
+        <duration>141</duration>
+      </concept>
+      <concept id="spring-jmx:ManagedAttribute">
+        <description>Labels all methods annotated with "org.springframework.jmx.export.annotation.ManagedAttribute" with "Spring" and "ManagedAttribute".</description>
+        <result>
+          <columns count="1">
+            <column primary="true">ManagedAttribute</column>
+          </columns>
+          <rows count="4">
+            <row>
+              <column name="ManagedAttribute">
+                <element language="Java">Method</element>
+                <source name="/org/springframework/samples/petclinic/util/CallMonitoringAspect.class"></source>
+                <value>org.springframework.samples.petclinic.util.CallMonitoringAspect#void setEnabled(boolean)</value>
+              </column>
+            </row>
+            <row>
+              <column name="ManagedAttribute">
+                <element language="Java">Method</element>
+                <source name="/org/springframework/samples/petclinic/util/CallMonitoringAspect.class"></source>
+                <value>org.springframework.samples.petclinic.util.CallMonitoringAspect#boolean isEnabled()</value>
+              </column>
+            </row>
+            <row>
+              <column name="ManagedAttribute">
+                <element language="Java">Method</element>
+                <source name="/org/springframework/samples/petclinic/util/CallMonitoringAspect.class"></source>
+                <value>org.springframework.samples.petclinic.util.CallMonitoringAspect#long getCallTime()</value>
+              </column>
+            </row>
+            <row>
+              <column name="ManagedAttribute">
+                <element language="Java">Method</element>
+                <source name="/org/springframework/samples/petclinic/util/CallMonitoringAspect.class"></source>
+                <value>org.springframework.samples.petclinic.util.CallMonitoringAspect#int getCallCount()</value>
+              </column>
+            </row>
+          </rows>
+        </result>
+        <status>success</status>
+        <severity level="3">minor</severity>
+        <duration>234</duration>
+      </concept>
+      <concept id="management:ManagedResources">
+        <description>All managed resources including their attributes and operations.</description>
+        <result>
+          <columns count="2">
+            <column primary="true">ManagedResource</column>
+            <column>Member</column>
+          </columns>
+          <rows count="1">
+            <row>
+              <column name="ManagedResource">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/util/CallMonitoringAspect.class"></source>
+                <value>org.springframework.samples.petclinic.util.CallMonitoringAspect</value>
+              </column>
+              <column name="Member">
+                <value>[isEnabled,setEnabled,reset,getCallTime,getCallCount]</value>
+              </column>
+            </row>
+          </rows>
+        </result>
+        <status>success</status>
+        <severity level="3">minor</severity>
+        <duration>219</duration>
+      </concept>
+      <duration>1202</duration>
+    </group>
+    <group id="vcs:Default" date="2017-10-27T21:34:12">
+      <concept id="vcs:CurrentBranch">
+        <description>Labels the current branch with `Current`.</description>
+        <result>
+          <columns count="2">
+            <column primary="true">CurrentBranch</column>
+            <column>Offset</column>
+          </columns>
+          <rows count="1">
+            <row>
+              <column name="CurrentBranch">
+                <value>heads/master</value>
+              </column>
+              <column name="Offset">
+                <value>0</value>
+              </column>
+            </row>
+          </rows>
+        </result>
+        <status>success</status>
+        <severity level="3">minor</severity>
+        <duration>467</duration>
+      </concept>
+      <constraint id="vcs:BranchesMustBeSynchronized">
+        <description>The branches "violations" and "jqa-remote" must include the latest commit (HEAD) of "master" (i.e. merges are required).</description>
+        <status>success</status>
+        <severity level="2">major</severity>
+        <duration>295</duration>
+      </constraint>
+      <duration>821</duration>
+    </group>
+    <group id="test:Default" date="2017-10-27T21:34:13">
+      <concept id="assertj:AssertMethod">
+        <description>Mark all assertThat methods of 'org.assertj.core.api.Assertions' with "AssertJ" and "Assert".</description>
+        <result>
+          <columns count="1">
+            <column primary="true">assertMethod</column>
+          </columns>
+          <rows count="7">
+            <row>
+              <column name="assertMethod">
+                <element language="Java">Method</element>
+                <source name="/org/assertj/core/api/Assertions.class"></source>
+                <value>org.assertj.core.api.Assertions#org.assertj.core.api.AbstractObjectAssert assertThat(java.lang.Object)</value>
+              </column>
+            </row>
+            <row>
+              <column name="assertMethod">
+                <element language="Java">Method</element>
+                <source name="/org/assertj/core/api/Assertions.class"></source>
+                <value>org.assertj.core.api.Assertions#org.assertj.core.api.AbstractBooleanAssert assertThat(boolean)</value>
+              </column>
+            </row>
+            <row>
+              <column name="assertMethod">
+                <element language="Java">Method</element>
+                <source name="/org/assertj/core/api/Assertions.class"></source>
+                <value>org.assertj.core.api.Assertions#org.assertj.core.api.AbstractCharSequenceAssert assertThat(java.lang.String)</value>
+              </column>
+            </row>
+            <row>
+              <column name="assertMethod">
+                <element language="Java">Method</element>
+                <source name="/org/assertj/core/api/Assertions.class"></source>
+                <value>org.assertj.core.api.Assertions#org.assertj.core.api.AbstractIntegerAssert assertThat(int)</value>
+              </column>
+            </row>
+            <row>
+              <column name="assertMethod">
+                <element language="Java">Method</element>
+                <source name="/org/assertj/core/api/Assertions.class"></source>
+                <value>org.assertj.core.api.Assertions#org.assertj.core.api.AbstractComparableAssert assertThat(java.lang.Comparable)</value>
+              </column>
+            </row>
+            <row>
+              <column name="assertMethod">
+                <element language="Java">Method</element>
+                <source name="/org/assertj/core/api/Assertions.class"></source>
+                <value>org.assertj.core.api.Assertions#org.assertj.core.api.AbstractIntegerAssert assertThat(java.lang.Integer)</value>
+              </column>
+            </row>
+            <row>
+              <column name="assertMethod">
+                <element language="Java">Method</element>
+                <source name="/org/assertj/core/api/Assertions.class"></source>
+                <value>org.assertj.core.api.Assertions#org.assertj.core.api.AbstractLongAssert assertThat(long)</value>
+              </column>
+            </row>
+          </rows>
+        </result>
+        <status>success</status>
+        <severity level="3">minor</severity>
+        <duration>105</duration>
+      </concept>
+      <concept id="spring-test-web:Assert">
+        <description>Mark method "org.springframework.test.web.servlet.ResultActions#andExpect" as "Spring" and "Assert".</description>
+        <result>
+          <columns count="1">
+            <column primary="true">assertMethod</column>
+          </columns>
+          <rows count="1">
+            <row>
+              <column name="assertMethod">
+                <element language="Java">Method</element>
+                <source name="/org/springframework/test/web/servlet/ResultActions.class"></source>
+                <value>org.springframework.test.web.servlet.ResultActions#org.springframework.test.web.servlet.ResultActions andExpect(org.springframework.test.web.servlet.ResultMatcher)</value>
+              </column>
+            </row>
+          </rows>
+        </result>
+        <status>success</status>
+        <severity level="3">minor</severity>
+        <duration>100</duration>
+      </concept>
+      <concept id="junit4:TestMethod">
+        <description>Finds all test methods (i.e. annotated with "@org.junit.Test") and labels them with "Test" and
+            "Junit4".
+        </description>
+        <result>
+          <columns count="1">
+            <column primary="true">Test</column>
+          </columns>
+          <rows count="40">
+            <row>
+              <column name="Test">
+                <element language="Java">Method</element>
+                <source name="/org/springframework/samples/petclinic/web/VisitControllerTests.class"></source>
+                <value>org.springframework.samples.petclinic.web.VisitControllerTests#void testProcessNewVisitFormSuccess()</value>
+              </column>
+            </row>
+            <row>
+              <column name="Test">
+                <element language="Java">Method</element>
+                <source name="/org/springframework/samples/petclinic/web/VisitControllerTests.class"></source>
+                <value>org.springframework.samples.petclinic.web.VisitControllerTests#void testProcessNewVisitFormHasErrors()</value>
+              </column>
+            </row>
+            <row>
+              <column name="Test">
+                <element language="Java">Method</element>
+                <source name="/org/springframework/samples/petclinic/web/VisitControllerTests.class"></source>
+                <value>org.springframework.samples.petclinic.web.VisitControllerTests#void testShowVisits()</value>
+              </column>
+            </row>
+            <row>
+              <column name="Test">
+                <element language="Java">Method</element>
+                <source name="/org/springframework/samples/petclinic/web/VisitControllerTests.class"></source>
+                <value>org.springframework.samples.petclinic.web.VisitControllerTests#void testInitNewVisitForm()</value>
+              </column>
+            </row>
+            <row>
+              <column name="Test">
+                <element language="Java">Method</element>
+                <source name="/org/springframework/samples/petclinic/web/PetControllerTests.class"></source>
+                <value>org.springframework.samples.petclinic.web.PetControllerTests#void testProcessUpdateFormHasErrors()</value>
+              </column>
+            </row>
+            <row>
+              <column name="Test">
+                <element language="Java">Method</element>
+                <source name="/org/springframework/samples/petclinic/web/PetControllerTests.class"></source>
+                <value>org.springframework.samples.petclinic.web.PetControllerTests#void testProcessUpdateFormSuccess()</value>
+              </column>
+            </row>
+            <row>
+              <column name="Test">
+                <element language="Java">Method</element>
+                <source name="/org/springframework/samples/petclinic/web/PetControllerTests.class"></source>
+                <value>org.springframework.samples.petclinic.web.PetControllerTests#void testInitUpdateForm()</value>
+              </column>
+            </row>
+            <row>
+              <column name="Test">
+                <element language="Java">Method</element>
+                <source name="/org/springframework/samples/petclinic/web/PetControllerTests.class"></source>
+                <value>org.springframework.samples.petclinic.web.PetControllerTests#void testProcessCreationFormHasErrors()</value>
+              </column>
+            </row>
+            <row>
+              <column name="Test">
+                <element language="Java">Method</element>
+                <source name="/org/springframework/samples/petclinic/web/PetControllerTests.class"></source>
+                <value>org.springframework.samples.petclinic.web.PetControllerTests#void testProcessCreationFormSuccess()</value>
+              </column>
+            </row>
+            <row>
+              <column name="Test">
+                <element language="Java">Method</element>
+                <source name="/org/springframework/samples/petclinic/web/PetControllerTests.class"></source>
+                <value>org.springframework.samples.petclinic.web.PetControllerTests#void testInitCreationForm()</value>
+              </column>
+            </row>
+            <row>
+              <column name="Test">
+                <element language="Java">Method</element>
+                <source name="/org/springframework/samples/petclinic/web/VetControllerTests.class"></source>
+                <value>org.springframework.samples.petclinic.web.VetControllerTests#void testShowVetListHtml()</value>
+              </column>
+            </row>
+            <row>
+              <column name="Test">
+                <element language="Java">Method</element>
+                <source name="/org/springframework/samples/petclinic/web/VetControllerTests.class"></source>
+                <value>org.springframework.samples.petclinic.web.VetControllerTests#void testShowResourcesVetList()</value>
+              </column>
+            </row>
+            <row>
+              <column name="Test">
+                <element language="Java">Method</element>
+                <source name="/org/springframework/samples/petclinic/web/VetControllerTests.class"></source>
+                <value>org.springframework.samples.petclinic.web.VetControllerTests#void testShowVetListXml()</value>
+              </column>
+            </row>
+            <row>
+              <column name="Test">
+                <element language="Java">Method</element>
+                <source name="/org/springframework/samples/petclinic/web/PetTypeFormatterTests.class"></source>
+                <value>org.springframework.samples.petclinic.web.PetTypeFormatterTests#void testPrint()</value>
+              </column>
+            </row>
+            <row>
+              <column name="Test">
+                <element language="Java">Method</element>
+                <source name="/org/springframework/samples/petclinic/web/PetTypeFormatterTests.class"></source>
+                <value>org.springframework.samples.petclinic.web.PetTypeFormatterTests#void shouldParse()</value>
+              </column>
+            </row>
+            <row>
+              <column name="Test">
+                <element language="Java">Method</element>
+                <source name="/org/springframework/samples/petclinic/web/PetTypeFormatterTests.class"></source>
+                <value>org.springframework.samples.petclinic.web.PetTypeFormatterTests#void shouldThrowParseException()</value>
+              </column>
+            </row>
+            <row>
+              <column name="Test">
+                <element language="Java">Method</element>
+                <source name="/org/springframework/samples/petclinic/web/OwnerControllerTests.class"></source>
+                <value>org.springframework.samples.petclinic.web.OwnerControllerTests#void testInitCreationForm()</value>
+              </column>
+            </row>
+            <row>
+              <column name="Test">
+                <element language="Java">Method</element>
+                <source name="/org/springframework/samples/petclinic/web/OwnerControllerTests.class"></source>
+                <value>org.springframework.samples.petclinic.web.OwnerControllerTests#void testProcessCreationFormHasErrors()</value>
+              </column>
+            </row>
+            <row>
+              <column name="Test">
+                <element language="Java">Method</element>
+                <source name="/org/springframework/samples/petclinic/web/OwnerControllerTests.class"></source>
+                <value>org.springframework.samples.petclinic.web.OwnerControllerTests#void testProcessCreationFormSuccess()</value>
+              </column>
+            </row>
+            <row>
+              <column name="Test">
+                <element language="Java">Method</element>
+                <source name="/org/springframework/samples/petclinic/web/CrashControllerTests.class"></source>
+                <value>org.springframework.samples.petclinic.web.CrashControllerTests#void testTriggerException()</value>
+              </column>
+            </row>
+            <row>
+              <column name="Test">
+                <element language="Java">Method</element>
+                <source name="/org/springframework/samples/petclinic/web/OwnerControllerTests.class"></source>
+                <value>org.springframework.samples.petclinic.web.OwnerControllerTests#void testProcessUpdateOwnerFormSuccess()</value>
+              </column>
+            </row>
+            <row>
+              <column name="Test">
+                <element language="Java">Method</element>
+                <source name="/org/springframework/samples/petclinic/web/OwnerControllerTests.class"></source>
+                <value>org.springframework.samples.petclinic.web.OwnerControllerTests#void testProcessUpdateOwnerFormHasErrors()</value>
+              </column>
+            </row>
+            <row>
+              <column name="Test">
+                <element language="Java">Method</element>
+                <source name="/org/springframework/samples/petclinic/web/OwnerControllerTests.class"></source>
+                <value>org.springframework.samples.petclinic.web.OwnerControllerTests#void testShowOwner()</value>
+              </column>
+            </row>
+            <row>
+              <column name="Test">
+                <element language="Java">Method</element>
+                <source name="/org/springframework/samples/petclinic/web/OwnerControllerTests.class"></source>
+                <value>org.springframework.samples.petclinic.web.OwnerControllerTests#void testInitFindForm()</value>
+              </column>
+            </row>
+            <row>
+              <column name="Test">
+                <element language="Java">Method</element>
+                <source name="/org/springframework/samples/petclinic/web/OwnerControllerTests.class"></source>
+                <value>org.springframework.samples.petclinic.web.OwnerControllerTests#void testProcessFindFormSuccess()</value>
+              </column>
+            </row>
+            <row>
+              <column name="Test">
+                <element language="Java">Method</element>
+                <source name="/org/springframework/samples/petclinic/web/OwnerControllerTests.class"></source>
+                <value>org.springframework.samples.petclinic.web.OwnerControllerTests#void testProcessFindFormByLastName()</value>
+              </column>
+            </row>
+            <row>
+              <column name="Test">
+                <element language="Java">Method</element>
+                <source name="/org/springframework/samples/petclinic/web/OwnerControllerTests.class"></source>
+                <value>org.springframework.samples.petclinic.web.OwnerControllerTests#void testProcessFindFormNoOwnersFound()</value>
+              </column>
+            </row>
+            <row>
+              <column name="Test">
+                <element language="Java">Method</element>
+                <source name="/org/springframework/samples/petclinic/web/OwnerControllerTests.class"></source>
+                <value>org.springframework.samples.petclinic.web.OwnerControllerTests#void testInitUpdateOwnerForm()</value>
+              </column>
+            </row>
+            <row>
+              <column name="Test">
+                <element language="Java">Method</element>
+                <source name="/org/springframework/samples/petclinic/service/AbstractClinicServiceTests.class"></source>
+                <value>org.springframework.samples.petclinic.service.AbstractClinicServiceTests#void shouldFindSingleOwnerWithPet()</value>
+              </column>
+            </row>
+            <row>
+              <column name="Test">
+                <element language="Java">Method</element>
+                <source name="/org/springframework/samples/petclinic/service/AbstractClinicServiceTests.class"></source>
+                <value>org.springframework.samples.petclinic.service.AbstractClinicServiceTests#void shouldFindOwnersByLastName()</value>
+              </column>
+            </row>
+            <row>
+              <column name="Test">
+                <element language="Java">Method</element>
+                <source name="/org/springframework/samples/petclinic/model/ValidatorTests.class"></source>
+                <value>org.springframework.samples.petclinic.model.ValidatorTests#void shouldNotValidateWhenFirstNameEmpty()</value>
+              </column>
+            </row>
+            <row>
+              <column name="Test">
+                <element language="Java">Method</element>
+                <source name="/org/springframework/samples/petclinic/service/AbstractClinicServiceTests.class"></source>
+                <value>org.springframework.samples.petclinic.service.AbstractClinicServiceTests#void shouldFindVisitsByPetId()</value>
+              </column>
+            </row>
+            <row>
+              <column name="Test">
+                <element language="Java">Method</element>
+                <source name="/org/springframework/samples/petclinic/service/AbstractClinicServiceTests.class"></source>
+                <value>org.springframework.samples.petclinic.service.AbstractClinicServiceTests#void shouldAddNewVisitForPet()</value>
+              </column>
+            </row>
+            <row>
+              <column name="Test">
+                <element language="Java">Method</element>
+                <source name="/org/springframework/samples/petclinic/service/AbstractClinicServiceTests.class"></source>
+                <value>org.springframework.samples.petclinic.service.AbstractClinicServiceTests#void shouldFindVets()</value>
+              </column>
+            </row>
+            <row>
+              <column name="Test">
+                <element language="Java">Method</element>
+                <source name="/org/springframework/samples/petclinic/service/AbstractClinicServiceTests.class"></source>
+                <value>org.springframework.samples.petclinic.service.AbstractClinicServiceTests#void shouldUpdatePetName()</value>
+              </column>
+            </row>
+            <row>
+              <column name="Test">
+                <element language="Java">Method</element>
+                <source name="/org/springframework/samples/petclinic/service/AbstractClinicServiceTests.class"></source>
+                <value>org.springframework.samples.petclinic.service.AbstractClinicServiceTests#void shouldInsertPetIntoDatabaseAndGenerateId()</value>
+              </column>
+            </row>
+            <row>
+              <column name="Test">
+                <element language="Java">Method</element>
+                <source name="/org/springframework/samples/petclinic/service/AbstractClinicServiceTests.class"></source>
+                <value>org.springframework.samples.petclinic.service.AbstractClinicServiceTests#void shouldFindAllPetTypes()</value>
+              </column>
+            </row>
+            <row>
+              <column name="Test">
+                <element language="Java">Method</element>
+                <source name="/org/springframework/samples/petclinic/service/AbstractClinicServiceTests.class"></source>
+                <value>org.springframework.samples.petclinic.service.AbstractClinicServiceTests#void shouldFindPetWithCorrectId()</value>
+              </column>
+            </row>
+            <row>
+              <column name="Test">
+                <element language="Java">Method</element>
+                <source name="/org/springframework/samples/petclinic/service/AbstractClinicServiceTests.class"></source>
+                <value>org.springframework.samples.petclinic.service.AbstractClinicServiceTests#void shouldInsertOwner()</value>
+              </column>
+            </row>
+            <row>
+              <column name="Test">
+                <element language="Java">Method</element>
+                <source name="/org/springframework/samples/petclinic/service/AbstractClinicServiceTests.class"></source>
+                <value>org.springframework.samples.petclinic.service.AbstractClinicServiceTests#void shouldUpdateOwner()</value>
+              </column>
+            </row>
+          </rows>
+        </result>
+        <status>success</status>
+        <severity level="3">minor</severity>
+        <duration>262</duration>
+      </concept>
+      <constraint id="test:TestMethodWithoutAssertion">
+        <description>All test methods must perform at least one assertion (within a call hierarchy of max. 3 steps).</description>
+        <status>success</status>
+        <severity level="2">major</severity>
+        <duration>373</duration>
+      </constraint>
+      <constraint id="junit4:IgnoreWithoutMessage">
+        <description>All @Ignore annotations must provide a message.</description>
+        <status>success</status>
+        <severity level="2">major</severity>
+        <duration>310</duration>
+      </constraint>
+      <duration>1381</duration>
+    </group>
+    <group id="package:Default" date="2017-10-27T21:34:14">
+      <concept id="maven:MainArtifact">
+        <description>Labels all main artifacts created by Maven modules with `Main`</description>
+        <result>
+          <columns count="1">
+            <column primary="true">MainArtifact</column>
+          </columns>
+          <rows count="1">
+            <row>
+              <column name="MainArtifact">
+                <element language="Generic">ArtifactFile</element>
+                <source name="C:/dev/repos/buschmais-spring-petclinic_fork_new/target/classes"></source>
+                <value>org.springframework.samples:spring-petclinic:war:4.2.6-SNAPSHOT</value>
+              </column>
+            </row>
+          </rows>
+        </result>
+        <status>success</status>
+        <severity level="3">minor</severity>
+        <duration>104</duration>
+      </concept>
+      <concept id="layer:Root">
+        <description>Labels the root package of the main artifact as `Root`</description>
+        <result>
+          <columns count="1">
+            <column primary="true">RootPackage</column>
+          </columns>
+          <rows count="1">
+            <row>
+              <column name="RootPackage">
+                <element language="Java">Package</element>
+                <source name="/org/springframework/samples/petclinic"></source>
+                <value>org.springframework.samples.petclinic</value>
+              </column>
+            </row>
+          </rows>
+        </result>
+        <status>success</status>
+        <severity level="3">minor</severity>
+        <duration>66</duration>
+      </concept>
+      <concept id="layer:Layer">
+        <description>Labels all direct sub-packages of the root package as `Layer`.</description>
+        <result>
+          <columns count="1">
+            <column primary="true">Layer</column>
+          </columns>
+          <rows count="4">
+            <row>
+              <column name="Layer">
+                <element language="Java">Package</element>
+                <source name="/org/springframework/samples/petclinic/repository"></source>
+                <value>org.springframework.samples.petclinic.repository</value>
+              </column>
+            </row>
+            <row>
+              <column name="Layer">
+                <element language="Java">Package</element>
+                <source name="/org/springframework/samples/petclinic/service"></source>
+                <value>org.springframework.samples.petclinic.service</value>
+              </column>
+            </row>
+            <row>
+              <column name="Layer">
+                <element language="Java">Package</element>
+                <source name="/org/springframework/samples/petclinic/web"></source>
+                <value>org.springframework.samples.petclinic.web</value>
+              </column>
+            </row>
+            <row>
+              <column name="Layer">
+                <element language="Java">Package</element>
+                <source name="/org/springframework/samples/petclinic/model"></source>
+                <value>org.springframework.samples.petclinic.model</value>
+              </column>
+            </row>
+          </rows>
+        </result>
+        <status>success</status>
+        <severity level="3">minor</severity>
+        <duration>112</duration>
+      </concept>
+      <concept id="layer:LayerDependency">
+        <description>Adds a relation `DEPENDS_ON` between two layers if there are type dependencies between them.</description>
+        <result>
+          <columns count="3">
+            <column primary="true">Dependent</column>
+            <column>Dependency</column>
+            <column>Weight</column>
+          </columns>
+          <rows count="5">
+            <row>
+              <column name="Dependent">
+                <element language="Java">Package</element>
+                <source name="/org/springframework/samples/petclinic/web"></source>
+                <value>org.springframework.samples.petclinic.web</value>
+              </column>
+              <column name="Dependency">
+                <element language="Java">Package</element>
+                <source name="/org/springframework/samples/petclinic/service"></source>
+                <value>org.springframework.samples.petclinic.service</value>
+              </column>
+              <column name="Weight">
+                <value>5</value>
+              </column>
+            </row>
+            <row>
+              <column name="Dependent">
+                <element language="Java">Package</element>
+                <source name="/org/springframework/samples/petclinic/service"></source>
+                <value>org.springframework.samples.petclinic.service</value>
+              </column>
+              <column name="Dependency">
+                <element language="Java">Package</element>
+                <source name="/org/springframework/samples/petclinic/repository"></source>
+                <value>org.springframework.samples.petclinic.repository</value>
+              </column>
+              <column name="Weight">
+                <value>4</value>
+              </column>
+            </row>
+            <row>
+              <column name="Dependent">
+                <element language="Java">Package</element>
+                <source name="/org/springframework/samples/petclinic/service"></source>
+                <value>org.springframework.samples.petclinic.service</value>
+              </column>
+              <column name="Dependency">
+                <element language="Java">Package</element>
+                <source name="/org/springframework/samples/petclinic/model"></source>
+                <value>org.springframework.samples.petclinic.model</value>
+              </column>
+              <column name="Weight">
+                <value>10</value>
+              </column>
+            </row>
+            <row>
+              <column name="Dependent">
+                <element language="Java">Package</element>
+                <source name="/org/springframework/samples/petclinic/repository"></source>
+                <value>org.springframework.samples.petclinic.repository</value>
+              </column>
+              <column name="Dependency">
+                <element language="Java">Package</element>
+                <source name="/org/springframework/samples/petclinic/model"></source>
+                <value>org.springframework.samples.petclinic.model</value>
+              </column>
+              <column name="Weight">
+                <value>27</value>
+              </column>
+            </row>
+            <row>
+              <column name="Dependent">
+                <element language="Java">Package</element>
+                <source name="/org/springframework/samples/petclinic/web"></source>
+                <value>org.springframework.samples.petclinic.web</value>
+              </column>
+              <column name="Dependency">
+                <element language="Java">Package</element>
+                <source name="/org/springframework/samples/petclinic/model"></source>
+                <value>org.springframework.samples.petclinic.model</value>
+              </column>
+              <column name="Weight">
+                <value>9</value>
+              </column>
+            </row>
+          </rows>
+        </result>
+        <status>success</status>
+        <severity level="3">minor</severity>
+        <duration>1201</duration>
+      </concept>
+      <concept id="package:DependencyDiagram">
+        <description>Creates a diagram about dependencies between layers.</description>
+        <result>
+          <columns count="1">
+            <column primary="true">{
+    role : "graph",
+    parent : artifact,
+    nodes : collect(package),
+    relationships: collect(dependsOn)
+  }</column>
+          </columns>
+          <rows count="1">
+            <row>
+              <column name="{
+    role : &quot;graph&quot;,
+    parent : artifact,
+    nodes : collect(package),
+    relationships: collect(dependsOn)
+  }">
+                <value>{parent:org.springframework.samples:spring-petclinic:war:4.2.6-SNAPSHOT,relationships:[CompositeObject, id=47626,CompositeObject, id=47626,CompositeObject, id=47626,CompositeObject, id=47626,CompositeObject, id=47624,CompositeObject, id=47625,CompositeObject, id=47624,CompositeObject, id=47625,CompositeObject, id=47623,CompositeObject, id=47627,CompositeObject, id=47623,CompositeObject, id=47627,CompositeObject, id=47623,CompositeObject, id=47627,CompositeObject, id=47623,CompositeObject, id=47627,CompositeObject, id=47623,CompositeObject, id=47627,CompositeObject, id=47623,CompositeObject, id=47627,CompositeObject, id=47623,CompositeObject, id=47627],role:graph,nodes:[org.springframework.samples.petclinic,org.springframework.samples.petclinic.model,org.springframework.samples.petclinic.model,org.springframework.samples.petclinic.model,org.springframework.samples.petclinic.model,org.springframework.samples.petclinic.model,org.springframework.samples.petclinic.model,org.springframework.samples.petclinic.model,org.springframework.samples.petclinic.model,org.springframework.samples.petclinic.model,org.springframework.samples.petclinic.model,org.springframework.samples.petclinic.repository,org.springframework.samples.petclinic.repository,org.springframework.samples.petclinic.repository,org.springframework.samples.petclinic.repository,org.springframework.samples.petclinic.repository.jdbc,org.springframework.samples.petclinic.repository.jdbc,org.springframework.samples.petclinic.repository.jdbc,org.springframework.samples.petclinic.repository.jdbc,org.springframework.samples.petclinic.repository.jdbc,org.springframework.samples.petclinic.repository.jdbc,org.springframework.samples.petclinic.repository.jdbc,org.springframework.samples.petclinic.repository.jdbc,org.springframework.samples.petclinic.repository.jdbc,org.springframework.samples.petclinic.repository.jpa,org.springframework.samples.petclinic.repository.jpa,org.springframework.samples.petclinic.repository.jpa,org.springframework.samples.petclinic.repository.jpa,org.springframework.samples.petclinic.repository.springdatajpa,org.springframework.samples.petclinic.repository.springdatajpa,org.springframework.samples.petclinic.repository.springdatajpa,org.springframework.samples.petclinic.repository.springdatajpa,org.springframework.samples.petclinic.service,org.springframework.samples.petclinic.service,org.springframework.samples.petclinic.service,org.springframework.samples.petclinic.service,org.springframework.samples.petclinic.util,org.springframework.samples.petclinic.util,org.springframework.samples.petclinic.web,org.springframework.samples.petclinic.web,org.springframework.samples.petclinic.web,org.springframework.samples.petclinic.web,org.springframework.samples.petclinic.web,org.springframework.samples.petclinic.web,org.springframework.samples.petclinic.web,org.springframework.samples.petclinic.web,org.springframework.samples.petclinic.web,org.springframework.samples.petclinic.web,org.springframework.samples.petclinic.web,org.springframework.samples.petclinic.web,org.springframework.samples.petclinic.web,org.springframework.samples.petclinic.web]}</value>
+              </column>
+            </row>
+          </rows>
+        </result>
+        <status>success</status>
+        <severity level="3">minor</severity>
+        <duration>273</duration>
+      </concept>
+      <concept id="dependency:Package">
+        <description>Creates a DEPENDS_ON relationship between a packages if there are type dependencies between them.
+        </description>
+        <result>
+          <columns count="2">
+            <column primary="true">package</column>
+            <column>PackageDependencies</column>
+          </columns>
+          <rows count="10">
+            <row>
+              <column name="package">
+                <element language="Java">Package</element>
+                <source name="/org/springframework/samples/petclinic/repository/springdatajpa"></source>
+                <value>org.springframework.samples.petclinic.repository.springdatajpa</value>
+              </column>
+              <column name="PackageDependencies">
+                <value>2</value>
+              </column>
+            </row>
+            <row>
+              <column name="package">
+                <element language="Java">Package</element>
+                <source name="/org/springframework/samples/petclinic/repository"></source>
+                <value>org.springframework.samples.petclinic.repository</value>
+              </column>
+              <column name="PackageDependencies">
+                <value>1</value>
+              </column>
+            </row>
+            <row>
+              <column name="package">
+                <element language="Java">Package</element>
+                <source name="/org/springframework/samples/petclinic/util"></source>
+                <value>org.springframework.samples.petclinic.util</value>
+              </column>
+              <column name="PackageDependencies">
+                <value>1</value>
+              </column>
+            </row>
+            <row>
+              <column name="package">
+                <element language="Java">Package</element>
+                <source name="/org/springframework/samples/petclinic/service"></source>
+                <value>org.springframework.samples.petclinic.service</value>
+              </column>
+              <column name="PackageDependencies">
+                <value>3</value>
+              </column>
+            </row>
+            <row>
+              <column name="package">
+                <element language="Java">Package</element>
+                <source name="/org/springframework/samples/petclinic/model"></source>
+                <value>org.springframework.samples.petclinic.model</value>
+              </column>
+              <column name="PackageDependencies">
+                <value>1</value>
+              </column>
+            </row>
+            <row>
+              <column name="package">
+                <element language="Java">Package</element>
+                <source name="/org/springframework/samples/petclinic/repository/jpa"></source>
+                <value>org.springframework.samples.petclinic.repository.jpa</value>
+              </column>
+              <column name="PackageDependencies">
+                <value>2</value>
+              </column>
+            </row>
+            <row>
+              <column name="package">
+                <element language="Java">Package</element>
+                <source name="/org/springframework/samples/petclinic/service"></source>
+                <value>org.springframework.samples.petclinic.service</value>
+              </column>
+              <column name="PackageDependencies">
+                <value>2</value>
+              </column>
+            </row>
+            <row>
+              <column name="package">
+                <element language="Java">Package</element>
+                <source name="/org/springframework/samples/petclinic/repository/jdbc"></source>
+                <value>org.springframework.samples.petclinic.repository.jdbc</value>
+              </column>
+              <column name="PackageDependencies">
+                <value>3</value>
+              </column>
+            </row>
+            <row>
+              <column name="package">
+                <element language="Java">Package</element>
+                <source name="/org/springframework/samples/petclinic/web"></source>
+                <value>org.springframework.samples.petclinic.web</value>
+              </column>
+              <column name="PackageDependencies">
+                <value>2</value>
+              </column>
+            </row>
+            <row>
+              <column name="package">
+                <element language="Java">Package</element>
+                <source name="/org/springframework/samples/petclinic/web"></source>
+                <value>org.springframework.samples.petclinic.web</value>
+              </column>
+              <column name="PackageDependencies">
+                <value>3</value>
+              </column>
+            </row>
+          </rows>
+        </result>
+        <status>success</status>
+        <severity level="3">minor</severity>
+        <duration>1142</duration>
+      </concept>
+      <constraint id="dependency:PackageCycles">
+        <description>There must be no cyclic package dependencies.</description>
+        <status>success</status>
+        <severity level="2">major</severity>
+        <duration>142</duration>
+      </constraint>
+      <duration>3324</duration>
+    </group>
+    <group id="spring-component:Default" date="2017-10-27T21:34:18">
+      <concept id="spring-mvc:Service">
+        <description>Labels all types annotated with "org.springframework.stereotype.Service" with "Spring", "Component" and "Service".</description>
+        <result>
+          <columns count="1">
+            <column primary="true">Service</column>
+          </columns>
+          <rows count="1">
+            <row>
+              <column name="Service">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/service/ClinicServiceImpl.class"></source>
+                <value>org.springframework.samples.petclinic.service.ClinicServiceImpl</value>
+              </column>
+            </row>
+          </rows>
+        </result>
+        <status>success</status>
+        <severity level="3">minor</severity>
+        <duration>60</duration>
+      </concept>
+      <concept id="spring-mvc:Controller">
+        <description>Labels all types annotated with "org.springframework.stereotype.Controller" with "Spring", "Component" and "Controller".</description>
+        <result>
+          <columns count="1">
+            <column primary="true">Controller</column>
+          </columns>
+          <rows count="5">
+            <row>
+              <column name="Controller">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/web/VetController.class"></source>
+                <value>org.springframework.samples.petclinic.web.VetController</value>
+              </column>
+            </row>
+            <row>
+              <column name="Controller">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/web/VisitController.class"></source>
+                <value>org.springframework.samples.petclinic.web.VisitController</value>
+              </column>
+            </row>
+            <row>
+              <column name="Controller">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/web/PetController.class"></source>
+                <value>org.springframework.samples.petclinic.web.PetController</value>
+              </column>
+            </row>
+            <row>
+              <column name="Controller">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/web/CrashController.class"></source>
+                <value>org.springframework.samples.petclinic.web.CrashController</value>
+              </column>
+            </row>
+            <row>
+              <column name="Controller">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/web/OwnerController.class"></source>
+                <value>org.springframework.samples.petclinic.web.OwnerController</value>
+              </column>
+            </row>
+          </rows>
+        </result>
+        <status>success</status>
+        <severity level="3">minor</severity>
+        <duration>112</duration>
+      </concept>
+      <concept id="spring-data:AnnotatedRepository">
+        <description>Labels all types annotated with "org.springframework.stereotype.Repository" with "Spring", "Component" and "Repository".</description>
+        <result>
+          <columns count="1">
+            <column primary="true">Repository</column>
+          </columns>
+          <rows count="8">
+            <row>
+              <column name="Repository">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/repository/jpa/JpaOwnerRepositoryImpl.class"></source>
+                <value>org.springframework.samples.petclinic.repository.jpa.JpaOwnerRepositoryImpl</value>
+              </column>
+            </row>
+            <row>
+              <column name="Repository">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/repository/jpa/JpaVetRepositoryImpl.class"></source>
+                <value>org.springframework.samples.petclinic.repository.jpa.JpaVetRepositoryImpl</value>
+              </column>
+            </row>
+            <row>
+              <column name="Repository">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/repository/jpa/JpaPetRepositoryImpl.class"></source>
+                <value>org.springframework.samples.petclinic.repository.jpa.JpaPetRepositoryImpl</value>
+              </column>
+            </row>
+            <row>
+              <column name="Repository">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/repository/jpa/JpaVisitRepositoryImpl.class"></source>
+                <value>org.springframework.samples.petclinic.repository.jpa.JpaVisitRepositoryImpl</value>
+              </column>
+            </row>
+            <row>
+              <column name="Repository">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/repository/jdbc/JdbcVisitRepositoryImpl.class"></source>
+                <value>org.springframework.samples.petclinic.repository.jdbc.JdbcVisitRepositoryImpl</value>
+              </column>
+            </row>
+            <row>
+              <column name="Repository">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/repository/jdbc/JdbcVetRepositoryImpl.class"></source>
+                <value>org.springframework.samples.petclinic.repository.jdbc.JdbcVetRepositoryImpl</value>
+              </column>
+            </row>
+            <row>
+              <column name="Repository">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/repository/jdbc/JdbcPetRepositoryImpl.class"></source>
+                <value>org.springframework.samples.petclinic.repository.jdbc.JdbcPetRepositoryImpl</value>
+              </column>
+            </row>
+            <row>
+              <column name="Repository">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/repository/jdbc/JdbcOwnerRepositoryImpl.class"></source>
+                <value>org.springframework.samples.petclinic.repository.jdbc.JdbcOwnerRepositoryImpl</value>
+              </column>
+            </row>
+          </rows>
+        </result>
+        <status>success</status>
+        <severity level="3">minor</severity>
+        <duration>81</duration>
+      </concept>
+      <concept id="spring-data:ImplementedRepository">
+        <description>Labels all types implementing "org.springframework.data.repository.Repository" with "Spring", "Component" and "Repository".</description>
+        <result>
+          <columns count="1">
+            <column primary="true">Repository</column>
+          </columns>
+          <rows count="4">
+            <row>
+              <column name="Repository">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/repository/springdatajpa/SpringDataPetRepository.class"></source>
+                <value>org.springframework.samples.petclinic.repository.springdatajpa.SpringDataPetRepository</value>
+              </column>
+            </row>
+            <row>
+              <column name="Repository">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/repository/springdatajpa/SpringDataVetRepository.class"></source>
+                <value>org.springframework.samples.petclinic.repository.springdatajpa.SpringDataVetRepository</value>
+              </column>
+            </row>
+            <row>
+              <column name="Repository">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/repository/springdatajpa/SpringDataVisitRepository.class"></source>
+                <value>org.springframework.samples.petclinic.repository.springdatajpa.SpringDataVisitRepository</value>
+              </column>
+            </row>
+            <row>
+              <column name="Repository">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/repository/springdatajpa/SpringDataOwnerRepository.class"></source>
+                <value>org.springframework.samples.petclinic.repository.springdatajpa.SpringDataOwnerRepository</value>
+              </column>
+            </row>
+          </rows>
+        </result>
+        <status>success</status>
+        <severity level="3">minor</severity>
+        <duration>98</duration>
+      </concept>
+      <concept id="spring-data:Repository">
+        <description>Returns all repositories.</description>
+        <result>
+          <columns count="1">
+            <column primary="true">Repository</column>
+          </columns>
+          <rows count="12">
+            <row>
+              <column name="Repository">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/repository/jdbc/JdbcOwnerRepositoryImpl.class"></source>
+                <value>org.springframework.samples.petclinic.repository.jdbc.JdbcOwnerRepositoryImpl</value>
+              </column>
+            </row>
+            <row>
+              <column name="Repository">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/repository/jdbc/JdbcPetRepositoryImpl.class"></source>
+                <value>org.springframework.samples.petclinic.repository.jdbc.JdbcPetRepositoryImpl</value>
+              </column>
+            </row>
+            <row>
+              <column name="Repository">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/repository/jdbc/JdbcVetRepositoryImpl.class"></source>
+                <value>org.springframework.samples.petclinic.repository.jdbc.JdbcVetRepositoryImpl</value>
+              </column>
+            </row>
+            <row>
+              <column name="Repository">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/repository/jdbc/JdbcVisitRepositoryImpl.class"></source>
+                <value>org.springframework.samples.petclinic.repository.jdbc.JdbcVisitRepositoryImpl</value>
+              </column>
+            </row>
+            <row>
+              <column name="Repository">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/repository/jpa/JpaOwnerRepositoryImpl.class"></source>
+                <value>org.springframework.samples.petclinic.repository.jpa.JpaOwnerRepositoryImpl</value>
+              </column>
+            </row>
+            <row>
+              <column name="Repository">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/repository/jpa/JpaPetRepositoryImpl.class"></source>
+                <value>org.springframework.samples.petclinic.repository.jpa.JpaPetRepositoryImpl</value>
+              </column>
+            </row>
+            <row>
+              <column name="Repository">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/repository/jpa/JpaVetRepositoryImpl.class"></source>
+                <value>org.springframework.samples.petclinic.repository.jpa.JpaVetRepositoryImpl</value>
+              </column>
+            </row>
+            <row>
+              <column name="Repository">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/repository/jpa/JpaVisitRepositoryImpl.class"></source>
+                <value>org.springframework.samples.petclinic.repository.jpa.JpaVisitRepositoryImpl</value>
+              </column>
+            </row>
+            <row>
+              <column name="Repository">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/repository/springdatajpa/SpringDataOwnerRepository.class"></source>
+                <value>org.springframework.samples.petclinic.repository.springdatajpa.SpringDataOwnerRepository</value>
+              </column>
+            </row>
+            <row>
+              <column name="Repository">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/repository/springdatajpa/SpringDataPetRepository.class"></source>
+                <value>org.springframework.samples.petclinic.repository.springdatajpa.SpringDataPetRepository</value>
+              </column>
+            </row>
+            <row>
+              <column name="Repository">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/repository/springdatajpa/SpringDataVetRepository.class"></source>
+                <value>org.springframework.samples.petclinic.repository.springdatajpa.SpringDataVetRepository</value>
+              </column>
+            </row>
+            <row>
+              <column name="Repository">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/repository/springdatajpa/SpringDataVisitRepository.class"></source>
+                <value>org.springframework.samples.petclinic.repository.springdatajpa.SpringDataVisitRepository</value>
+              </column>
+            </row>
+          </rows>
+        </result>
+        <status>success</status>
+        <severity level="3">minor</severity>
+        <duration>66</duration>
+      </concept>
+      <concept id="spring-component:Component">
+        <description>Reports all Spring components.</description>
+        <result>
+          <columns count="1">
+            <column primary="true">Component</column>
+          </columns>
+          <rows count="18">
+            <row>
+              <column name="Component">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/repository/jdbc/JdbcOwnerRepositoryImpl.class"></source>
+                <value>org.springframework.samples.petclinic.repository.jdbc.JdbcOwnerRepositoryImpl</value>
+              </column>
+            </row>
+            <row>
+              <column name="Component">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/repository/jdbc/JdbcPetRepositoryImpl.class"></source>
+                <value>org.springframework.samples.petclinic.repository.jdbc.JdbcPetRepositoryImpl</value>
+              </column>
+            </row>
+            <row>
+              <column name="Component">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/repository/jdbc/JdbcVetRepositoryImpl.class"></source>
+                <value>org.springframework.samples.petclinic.repository.jdbc.JdbcVetRepositoryImpl</value>
+              </column>
+            </row>
+            <row>
+              <column name="Component">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/repository/jdbc/JdbcVisitRepositoryImpl.class"></source>
+                <value>org.springframework.samples.petclinic.repository.jdbc.JdbcVisitRepositoryImpl</value>
+              </column>
+            </row>
+            <row>
+              <column name="Component">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/repository/jpa/JpaOwnerRepositoryImpl.class"></source>
+                <value>org.springframework.samples.petclinic.repository.jpa.JpaOwnerRepositoryImpl</value>
+              </column>
+            </row>
+            <row>
+              <column name="Component">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/repository/jpa/JpaPetRepositoryImpl.class"></source>
+                <value>org.springframework.samples.petclinic.repository.jpa.JpaPetRepositoryImpl</value>
+              </column>
+            </row>
+            <row>
+              <column name="Component">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/repository/jpa/JpaVetRepositoryImpl.class"></source>
+                <value>org.springframework.samples.petclinic.repository.jpa.JpaVetRepositoryImpl</value>
+              </column>
+            </row>
+            <row>
+              <column name="Component">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/repository/jpa/JpaVisitRepositoryImpl.class"></source>
+                <value>org.springframework.samples.petclinic.repository.jpa.JpaVisitRepositoryImpl</value>
+              </column>
+            </row>
+            <row>
+              <column name="Component">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/repository/springdatajpa/SpringDataOwnerRepository.class"></source>
+                <value>org.springframework.samples.petclinic.repository.springdatajpa.SpringDataOwnerRepository</value>
+              </column>
+            </row>
+            <row>
+              <column name="Component">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/repository/springdatajpa/SpringDataPetRepository.class"></source>
+                <value>org.springframework.samples.petclinic.repository.springdatajpa.SpringDataPetRepository</value>
+              </column>
+            </row>
+            <row>
+              <column name="Component">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/repository/springdatajpa/SpringDataVetRepository.class"></source>
+                <value>org.springframework.samples.petclinic.repository.springdatajpa.SpringDataVetRepository</value>
+              </column>
+            </row>
+            <row>
+              <column name="Component">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/repository/springdatajpa/SpringDataVisitRepository.class"></source>
+                <value>org.springframework.samples.petclinic.repository.springdatajpa.SpringDataVisitRepository</value>
+              </column>
+            </row>
+            <row>
+              <column name="Component">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/service/ClinicServiceImpl.class"></source>
+                <value>org.springframework.samples.petclinic.service.ClinicServiceImpl</value>
+              </column>
+            </row>
+            <row>
+              <column name="Component">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/web/CrashController.class"></source>
+                <value>org.springframework.samples.petclinic.web.CrashController</value>
+              </column>
+            </row>
+            <row>
+              <column name="Component">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/web/OwnerController.class"></source>
+                <value>org.springframework.samples.petclinic.web.OwnerController</value>
+              </column>
+            </row>
+            <row>
+              <column name="Component">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/web/PetController.class"></source>
+                <value>org.springframework.samples.petclinic.web.PetController</value>
+              </column>
+            </row>
+            <row>
+              <column name="Component">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/web/VetController.class"></source>
+                <value>org.springframework.samples.petclinic.web.VetController</value>
+              </column>
+            </row>
+            <row>
+              <column name="Component">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/web/VisitController.class"></source>
+                <value>org.springframework.samples.petclinic.web.VisitController</value>
+              </column>
+            </row>
+          </rows>
+        </result>
+        <status>success</status>
+        <severity level="3">minor</severity>
+        <duration>53</duration>
+      </concept>
+      <concept id="spring-component:ComponentDependencies">
+        <description>Creates a USES relation between Spring components.</description>
+        <result>
+          <columns count="2">
+            <column primary="true">Dependent</column>
+            <column>Dependencies</column>
+          </columns>
+          <rows count="6">
+            <row>
+              <column name="Dependent">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/web/VisitController.class"></source>
+                <value>org.springframework.samples.petclinic.web.VisitController</value>
+              </column>
+              <column name="Dependencies">
+                <value>[org.springframework.samples.petclinic.service.ClinicServiceImpl]</value>
+              </column>
+            </row>
+            <row>
+              <column name="Dependent">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/web/PetController.class"></source>
+                <value>org.springframework.samples.petclinic.web.PetController</value>
+              </column>
+              <column name="Dependencies">
+                <value>[org.springframework.samples.petclinic.service.ClinicServiceImpl]</value>
+              </column>
+            </row>
+            <row>
+              <column name="Dependent">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/web/VetController.class"></source>
+                <value>org.springframework.samples.petclinic.web.VetController</value>
+              </column>
+              <column name="Dependencies">
+                <value>[org.springframework.samples.petclinic.service.ClinicServiceImpl]</value>
+              </column>
+            </row>
+            <row>
+              <column name="Dependent">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/web/OwnerController.class"></source>
+                <value>org.springframework.samples.petclinic.web.OwnerController</value>
+              </column>
+              <column name="Dependencies">
+                <value>[org.springframework.samples.petclinic.service.ClinicServiceImpl]</value>
+              </column>
+            </row>
+            <row>
+              <column name="Dependent">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/repository/jdbc/JdbcPetRepositoryImpl.class"></source>
+                <value>org.springframework.samples.petclinic.repository.jdbc.JdbcPetRepositoryImpl</value>
+              </column>
+              <column name="Dependencies">
+                <value>[org.springframework.samples.petclinic.repository.jdbc.JdbcOwnerRepositoryImpl,org.springframework.samples.petclinic.repository.jpa.JpaOwnerRepositoryImpl,org.springframework.samples.petclinic.repository.springdatajpa.SpringDataOwnerRepository]</value>
+              </column>
+            </row>
+            <row>
+              <column name="Dependent">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/service/ClinicServiceImpl.class"></source>
+                <value>org.springframework.samples.petclinic.service.ClinicServiceImpl</value>
+              </column>
+              <column name="Dependencies">
+                <value>[org.springframework.samples.petclinic.repository.jdbc.JdbcOwnerRepositoryImpl,org.springframework.samples.petclinic.repository.jpa.JpaOwnerRepositoryImpl,org.springframework.samples.petclinic.repository.springdatajpa.SpringDataOwnerRepository,org.springframework.samples.petclinic.repository.jdbc.JdbcPetRepositoryImpl,org.springframework.samples.petclinic.repository.jpa.JpaPetRepositoryImpl,org.springframework.samples.petclinic.repository.springdatajpa.SpringDataPetRepository,org.springframework.samples.petclinic.repository.jdbc.JdbcVisitRepositoryImpl,org.springframework.samples.petclinic.repository.jpa.JpaVisitRepositoryImpl,org.springframework.samples.petclinic.repository.springdatajpa.SpringDataVisitRepository,org.springframework.samples.petclinic.repository.jdbc.JdbcVetRepositoryImpl,org.springframework.samples.petclinic.repository.jpa.JpaVetRepositoryImpl,org.springframework.samples.petclinic.repository.springdatajpa.SpringDataVetRepository]</value>
+              </column>
+            </row>
+          </rows>
+        </result>
+        <status>success</status>
+        <severity level="3">minor</severity>
+        <duration>674</duration>
+      </concept>
+      <constraint id="spring-component:RepositoryMustBeLocatedInRepositoryLayer">
+        <description>A repository must be located in the layer named 'repository'.</description>
+        <status>success</status>
+        <severity level="2">major</severity>
+        <duration>249</duration>
+      </constraint>
+      <constraint id="spring-component:ControllerDependencies">
+        <description>A controller can only have dependencies to services (e.g. direct usage of repositories is not allowed).</description>
+        <status>success</status>
+        <severity level="2">major</severity>
+        <duration>77</duration>
+      </constraint>
+      <constraint id="spring-component:ImplementationDependencies">
+        <description>There must be no direct dependencies between Spring component implementations, i.e. only dependencies to interfaces are allowed.</description>
+        <status>success</status>
+        <severity level="2">major</severity>
+        <duration>179</duration>
+      </constraint>
+      <constraint id="spring-component:ServiceDependencies">
+        <description>A service can only have dependencies to repositories or other services (e.g. usage of controllers is not allowed).</description>
+        <status>success</status>
+        <severity level="2">major</severity>
+        <duration>52</duration>
+      </constraint>
+      <constraint id="spring-component:RepositoryDependencies">
+        <description>A repository can only have dependencies to other repositories.</description>
+        <status>success</status>
+        <severity level="2">major</severity>
+        <duration>50</duration>
+      </constraint>
+      <constraint id="spring-component:ServiceMustBeLocatedInServiceLayer">
+        <description>A service must be located in the layer named 'service'.</description>
+        <status>success</status>
+        <severity level="2">major</severity>
+        <duration>128</duration>
+      </constraint>
+      <constraint id="spring-component:ControllerMustBeLocatedInWebLayer">
+        <description>A controller must be located in the layer named 'web'.</description>
+        <status>success</status>
+        <severity level="2">major</severity>
+        <duration>106</duration>
+      </constraint>
+      <duration>2495</duration>
+    </group>
+    <group id="maven:Default" date="2017-10-27T21:34:20">
+      <concept id="maven:ProjectArtifactDependencyDiagram">
+        <description>Creates a diagram about project artifact dependencies.</description>
+        <result>
+          <columns count="2">
+            <column primary="true">artifact</column>
+            <column>dependsOn</column>
+          </columns>
+          <rows count="2">
+            <row>
+              <column name="artifact">
+                <element language="Generic">ArtifactFile</element>
+                <source name="C:/dev/repos/buschmais-spring-petclinic_fork_new/target/test-classes"></source>
+                <value>org.springframework.samples:spring-petclinic:test-jar:4.2.6-SNAPSHOT</value>
+              </column>
+              <column name="dependsOn">
+                <value></value>
+              </column>
+            </row>
+            <row>
+              <column name="artifact">
+                <element language="Generic">ArtifactFile</element>
+                <source name="C:/dev/repos/buschmais-spring-petclinic_fork_new/target/classes"></source>
+                <value>org.springframework.samples:spring-petclinic:war:4.2.6-SNAPSHOT</value>
+              </column>
+              <column name="dependsOn">
+                <value></value>
+              </column>
+            </row>
+          </rows>
+        </result>
+        <status>success</status>
+        <severity level="3">minor</severity>
+        <duration>76</duration>
+      </concept>
+      <duration>100</duration>
+    </group>
+    <group id="layer:Default" date="2017-10-27T21:34:20">
+      <concept id="layer:LayerDependencyDiagram">
+        <description>Creates a diagram about dependencies between layers.</description>
+        <result>
+          <columns count="2">
+            <column primary="true">dependsOn</column>
+            <column>layer</column>
+          </columns>
+          <rows count="6">
+            <row>
+              <column name="dependsOn">
+                <value></value>
+              </column>
+              <column name="layer">
+                <element language="Java">Package</element>
+                <source name="/org/springframework/samples/petclinic/model"></source>
+                <value>org.springframework.samples.petclinic.model</value>
+              </column>
+            </row>
+            <row>
+              <column name="dependsOn">
+                <value></value>
+              </column>
+              <column name="layer">
+                <element language="Java">Package</element>
+                <source name="/org/springframework/samples/petclinic/repository"></source>
+                <value>org.springframework.samples.petclinic.repository</value>
+              </column>
+            </row>
+            <row>
+              <column name="dependsOn">
+                <value></value>
+              </column>
+              <column name="layer">
+                <element language="Java">Package</element>
+                <source name="/org/springframework/samples/petclinic/service"></source>
+                <value>org.springframework.samples.petclinic.service</value>
+              </column>
+            </row>
+            <row>
+              <column name="dependsOn">
+                <value></value>
+              </column>
+              <column name="layer">
+                <element language="Java">Package</element>
+                <source name="/org/springframework/samples/petclinic/service"></source>
+                <value>org.springframework.samples.petclinic.service</value>
+              </column>
+            </row>
+            <row>
+              <column name="dependsOn">
+                <value></value>
+              </column>
+              <column name="layer">
+                <element language="Java">Package</element>
+                <source name="/org/springframework/samples/petclinic/web"></source>
+                <value>org.springframework.samples.petclinic.web</value>
+              </column>
+            </row>
+            <row>
+              <column name="dependsOn">
+                <value></value>
+              </column>
+              <column name="layer">
+                <element language="Java">Package</element>
+                <source name="/org/springframework/samples/petclinic/web"></source>
+                <value>org.springframework.samples.petclinic.web</value>
+              </column>
+            </row>
+          </rows>
+        </result>
+        <status>success</status>
+        <severity level="3">minor</severity>
+        <duration>31</duration>
+      </concept>
+      <constraint id="layer:LayerDependencyViolation">
+        <description>There must be no dependencies between layers that are not explicitly defined.</description>
+        <status>success</status>
+        <severity level="2">major</severity>
+        <duration>359</duration>
+      </constraint>
+      <duration>1106</duration>
+    </group>
+    <group id="business:Default" date="2017-10-27T21:34:21">
+      <concept id="business:Subdomain">
+        <description>Creates predefined Subdomain nodes and connects them to all Type nodes via naming conventions.</description>
+        <result>
+          <columns count="2">
+            <column primary="true">Subdomain</column>
+            <column>Types</column>
+          </columns>
+          <rows count="7">
+            <row>
+              <column name="Subdomain">
+                <value>Visit</value>
+              </column>
+              <column name="Types">
+                <value>9</value>
+              </column>
+            </row>
+            <row>
+              <column name="Subdomain">
+                <value>Person</value>
+              </column>
+              <column name="Types">
+                <value>1</value>
+              </column>
+            </row>
+            <row>
+              <column name="Subdomain">
+                <value>Specialty</value>
+              </column>
+              <column name="Types">
+                <value>1</value>
+              </column>
+            </row>
+            <row>
+              <column name="Subdomain">
+                <value>Clinic</value>
+              </column>
+              <column name="Types">
+                <value>6</value>
+              </column>
+            </row>
+            <row>
+              <column name="Subdomain">
+                <value>Vet</value>
+              </column>
+              <column name="Types">
+                <value>9</value>
+              </column>
+            </row>
+            <row>
+              <column name="Subdomain">
+                <value>Owner</value>
+              </column>
+              <column name="Types">
+                <value>7</value>
+              </column>
+            </row>
+            <row>
+              <column name="Subdomain">
+                <value>Pet</value>
+              </column>
+              <column name="Types">
+                <value>17</value>
+              </column>
+            </row>
+          </rows>
+        </result>
+        <status>success</status>
+        <severity level="3">minor</severity>
+        <duration>215</duration>
+      </concept>
+      <concept id="business:SubdomainDependency">
+        <description>Creates DEPENDS_ON relations between two subdomains if there are Java type dependencies between them.</description>
+        <result>
+          <columns count="2">
+            <column primary="true">Subdomain</column>
+            <column>Dependencies</column>
+          </columns>
+          <rows count="5">
+            <row>
+              <column name="Subdomain">
+                <value>Clinic</value>
+              </column>
+              <column name="Dependencies">
+                <value>[Visit,Specialty,Owner,Pet,Vet]</value>
+              </column>
+            </row>
+            <row>
+              <column name="Subdomain">
+                <value>Owner</value>
+              </column>
+              <column name="Dependencies">
+                <value>[Clinic,Person,Visit,Pet]</value>
+              </column>
+            </row>
+            <row>
+              <column name="Subdomain">
+                <value>Pet</value>
+              </column>
+              <column name="Dependencies">
+                <value>[Owner,Clinic,Visit]</value>
+              </column>
+            </row>
+            <row>
+              <column name="Subdomain">
+                <value>Vet</value>
+              </column>
+              <column name="Dependencies">
+                <value>[Specialty,Person,Clinic]</value>
+              </column>
+            </row>
+            <row>
+              <column name="Subdomain">
+                <value>Visit</value>
+              </column>
+              <column name="Dependencies">
+                <value>[Clinic,Pet]</value>
+              </column>
+            </row>
+          </rows>
+        </result>
+        <status>success</status>
+        <severity level="3">minor</severity>
+        <duration>208</duration>
+      </concept>
+      <duration>498</duration>
+    </group>
+    <group id="model:Default" date="2017-10-27T21:34:22">
+      <concept id="jpa2:Entity">
+        <description>Labels all types annotated with @javax.persistence.Entity with "Jpa" and "Entity".</description>
+        <result>
+          <columns count="1">
+            <column primary="true">JpaEntity</column>
+          </columns>
+          <rows count="6">
+            <row>
+              <column name="JpaEntity">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/model/Visit.class"></source>
+                <value>org.springframework.samples.petclinic.model.Visit</value>
+              </column>
+            </row>
+            <row>
+              <column name="JpaEntity">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/model/Pet.class"></source>
+                <value>org.springframework.samples.petclinic.model.Pet</value>
+              </column>
+            </row>
+            <row>
+              <column name="JpaEntity">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/model/Specialty.class"></source>
+                <value>org.springframework.samples.petclinic.model.Specialty</value>
+              </column>
+            </row>
+            <row>
+              <column name="JpaEntity">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/model/Vet.class"></source>
+                <value>org.springframework.samples.petclinic.model.Vet</value>
+              </column>
+            </row>
+            <row>
+              <column name="JpaEntity">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/model/PetType.class"></source>
+                <value>org.springframework.samples.petclinic.model.PetType</value>
+              </column>
+            </row>
+            <row>
+              <column name="JpaEntity">
+                <element language="Java">Type</element>
+                <source name="/org/springframework/samples/petclinic/model/Owner.class"></source>
+                <value>org.springframework.samples.petclinic.model.Owner</value>
+              </column>
+            </row>
+          </rows>
+        </result>
+        <status>success</status>
+        <severity level="3">minor</severity>
+        <duration>71</duration>
+      </concept>
+      <constraint id="model:JpaEntityInModelPackage">
+        <description>All JPA entities must be located in packages named "model".</description>
+        <status>success</status>
+        <severity level="2">major</severity>
+        <duration>40</duration>
+      </constraint>
+      <duration>153</duration>
+    </group>
+    <duration>154</duration>
+  </group>
+</jqa-report:jqassistant-report>

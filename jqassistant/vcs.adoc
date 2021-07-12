@@ -1,0 +1,70 @@
+[[vcs:Default]]
+[role=group,includesConstraints="vcs:*",includesConcepts="vcs:*"]
+== Version Control System
+
+The rules defined in this document refer to Git.
+
+=== Reports
+
+[[vcs:Authors]]
+[source,cypher,role=concept,reportType="wordcloud"]
+.The authors of this project as word cloud.
+----
+MATCH
+  (author:Author)-[:COMMITTED]->(:Commit)
+RETURN
+  author.email
+----
+
+=== Concepts
+
+[[vcs:CurrentBranch]]
+[source,cypher,role=concept]
+.The currently checked-out local branch is labeled with `Current`.
+----
+MATCH
+  (repository:Repository)-[:HAS_BRANCH]->(branch:Git:Branch)
+WHERE
+  branch.name starts with "heads/"
+MATCH
+  (repository)-[:HAS_HEAD]->(head:Git:Commit),
+  (branch)-[:HAS_HEAD]->(branchHead:Git:Commit),
+   p=shortestPath((branchHead)-[:HAS_PARENT*0..]->(head))
+SET
+  branch:Current
+RETURN
+  branch.name as CurrentBranch, length(p) as Offset
+----
+
+=== Constraints
+
+[[vcs:BranchesMustBeSynchronized]]
+[source,cypher,role=constraint]
+.The branches "jqa-remote" and "heads/jqa-testimpactanalysis" must include the latest commit (HEAD) of "master", i.e. merges are required from master into these branches.
+----
+MATCH
+  (master:Branch),
+  (branch:Branch)
+WHERE
+  master.name = "heads/master"
+  and branch.name in [
+    "heads/jqa-remote",
+    "heads/jqa-testimpactanalysis"
+  ]
+WITH
+  master, branch
+MATCH
+  (master)-[:HAS_HEAD]->(masterHead:Commit),
+  (branch)-[:HAS_HEAD]->(branchHead:Commit)
+WHERE
+  branchHead <> masterHead
+OPTIONAL MATCH
+  p=shortestPath((branchHead)-[:HAS_PARENT*]->(masterHead))
+WITH
+  master, branch, p
+WHERE
+  p is null
+RETURN
+  branch.name as OutdatedBranch
+----
+

@@ -1,0 +1,19 @@
+== Spring Test Framework
+
+=== Concepts
+
+[[spring-test-web:Assert]]
+[source,cypher,role=concept]
+.The method "org.springframework.test.web.servlet.ResultActions#andExpect" is used as an Assertion and labeled with "Spring" and "Assert".
+----
+MATCH
+  (assertType:Type)-[:DECLARES]->(assertMethod)
+WHERE
+  assertType.fqn = 'org.springframework.test.web.servlet.ResultActions'
+  and assertMethod.signature =~ '.* andExpect.*'
+SET
+  assertMethod:Spring:Assert
+RETURN
+  assertMethod
+----
+

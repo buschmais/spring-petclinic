@@ -30,6 +30,9 @@
     <jacoco.version>0.8.5</jacoco.version>
     <nohttp-checkstyle.version>0.0.4.RELEASE</nohttp-checkstyle.version>
     <spring-format.version>0.0.25</spring-format.version>
+
+    <!-- jQAssistant -->
+    <jqassistant.version>1.10.0</jqassistant.version>
   </properties>
 
   <dependencies>
@@ -267,6 +270,93 @@
           </dependency>
         </dependencies>
       </plugin>
+
+      <!-- jQAssistant -->
+      <plugin>
+        <groupId>com.buschmais.jqassistant</groupId>
+        <artifactId>jqassistant-maven-plugin</artifactId>
+        <version>${jqassistant.version}</version>
+        <executions>
+          <execution>
+            <id>default-cli</id>
+            <goals>
+              <goal>scan</goal>
+              <goal>analyze</goal>
+            </goals>
+            <configuration>
+              <warnOnSeverity>MINOR</warnOnSeverity>
+              <failOnSeverity>CRITICAL</failOnSeverity>
+              <!--
+              <scanProperties>
+                  <maven3.dependencies.enable>true</maven3.dependencies.enable>
+                  <maven3.dependencies.includes>org.springframework*:*:*</maven3.dependencies.includes>
+              </scanProperties>
+              -->
+              <groups>
+                <group>default</group>
+                <!-- Required by the jQAssistant Dashboard plugin, see declaration in plugin dependencies -->
+                <group>jqassistant-dashboard:Default</group>
+              </groups>
+
+              <scanIncludes>
+                <scanInclude>
+                  <path>${project.basedir}/.git</path>
+                </scanInclude>
+              </scanIncludes>
+              <rule>
+                <defaultConceptSeverity>INFO</defaultConceptSeverity>
+              </rule>
+            </configuration>
+          </execution>
+        </executions>
+        <configuration>
+          <store>
+            <!--
+            <uri>bolt://localhost:7687</uri>
+            <username>neo4j</username>
+                        <password>jqassistant</password>
+            <embedded>
+                <listenAddress>localhost</listenAddress>
+                <httpPort>7474</httpPort>
+                <boltPort>7687</boltPort>
+            </embedded>
+            -->
+          </store>
+        </configuration>
+        <!-- Additional plugins are provided as dependencies to the jQAssistant Maven Plugin -->
+        <dependencies>
+          <!-- Allows using PlantUML diagrams as concepts/constraints -->
+          <dependency>
+            <groupId>org.jqassistant.contrib.plugin</groupId>
+            <artifactId>jqassistant-plantuml-rule-plugin</artifactId>
+            <version>1.10.0</version>
+          </dependency>
+          <!-- Creates word clouds from concept/constraint results -->
+          <dependency>
+            <groupId>org.jqassistant.contrib.plugin</groupId>
+            <artifactId>jqassistant-wordcloud-report-plugin</artifactId>
+            <version>1.10.0</version>
+          </dependency>
+          <!-- Adds the jQAssistant Dashboard, available as http://localhost:7474/jqassistant/dashboard after running mvn jqassistant:server -->
+          <dependency>
+            <groupId>org.jqassistant.contrib.plugin</groupId>
+            <artifactId>jqassistant-dashboard-plugin</artifactId>
+            <version>1.10.0</version>
+          </dependency>
+          <!-- Provides APOC functions -->
+          <dependency>
+            <groupId>org.jqassistant.contrib.plugin</groupId>
+            <artifactId>jqassistant-apoc-plugin</artifactId>
+            <version>1.10.0</version>
+          </dependency>
+          <!-- Provides graph algorithms -->
+          <dependency>
+            <groupId>org.jqassistant.contrib.plugin</groupId>
+            <artifactId>jqassistant-graph-algorithms-plugin</artifactId>
+            <version>1.10.0</version>
+          </dependency>
+        </dependencies>
+      </plugin>
     </plugins>
   </build>
 
@@ -312,6 +402,15 @@
       <snapshots>
         <enabled>false</enabled>
       </snapshots>
+    </pluginRepository>
+    <!-- Required for SNAPSHOT releases of jQAssistant -->
+    <pluginRepository>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+      <id>sonatype-nexus-snapshots</id>
+      <name>Sonatype Nexus Snapshots</name>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
     </pluginRepository>
   </pluginRepositories>
 

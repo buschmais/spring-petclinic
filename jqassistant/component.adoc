@@ -1,0 +1,113 @@
+[[component:Default]]
+[role=group,includesConstraints="component:*",includesConcepts="component:*Report"]
+== Components
+
+This chapter describes the concepts and constraints related to the component structure of the application.
+
+=== Concepts
+
+[[component:Component]]
+.The application is structured by components. Each Component is represented by a package located in the root package and labeled as `Component`.
+[source,cypher,role=concept]
+----
+MATCH
+  (:Main:Artifact)-[:CONTAINS]->(root:Package)-[:CONTAINS]->(component:Package)
+WHERE
+  root.fqn = "org.springframework.samples.petclinic"
+SET
+  component:Component
+RETURN
+  component as Component
+----
+
+[[component:ComponentDependency]]
+[source,cypher,role=concept,requiresConcepts="component:Component",reportType="csv"]
+.A dependency between two components exists if there are dependencies between Java types in any of the sub-packages. These are represented by `DEPENDS_ON_COMPONENT` relations.
+----
+MATCH
+  (component1:Component:Package)-[:CONTAINS*]->(type1:Type),
+  (component2:Component:Package)-[:CONTAINS*]->(type2:Type),
+  (type1)-[d:DEPENDS_ON]->(type2)
+WHERE
+  component1 <> component2
+WITH
+  component1, component2, count(d) AS weight
+MERGE
+  (component1)-[d:DEPENDS_ON_COMPONENT]->(component2)
+SET
+  d.weight = weight
+RETURN
+  component1 AS Dependent, component2 AS Dependency, weight AS Weight
+----
+
+[[component:ComponentDependencyDefinition]]
+[plantuml,componentDependencyDefinition,role=concept,requiresConcepts="component:Component"]
+.The dependencies between layers are represented by `DEFINES_DEPENDENCY` relations.
+----
+@startuml
+skinparam componentStyle uml2
+
+[{name:"vet"}]        as vet      <<Component>> <<Package>>
+[{name:"owner"}]      as owner    <<Component>> <<Package>>
+[{name:"visit"}]      as visit    <<Component>> <<Package>>
+[{name:"model"}]      as model    <<Component>> <<Package>>
+[{name:"system"}]     as system   <<Component>> <<Package>>
+
+
+vet        -down-> model    : (+):DEFINES_DEPENDENCY
+owner      -down-> model    : (+):DEFINES_DEPENDENCY
+owner      -right-> visit   : (+):DEFINES_DEPENDENCY
+visit      -down-> model    : (+):DEFINES_DEPENDENCY
+@enduml
+----
+
+=== Constraints
+
+[[component:ComponentDependencyViolation]]
+[source,cypher,role=constraint,requiresConcepts="component:ComponentDependency,component:ComponentDependencyDefinition",primaryReportColumn="Type"]
+.There must be no dependencies between components that are not explicitly defined.
+----
+MATCH
+  (component1:Component)-[:DEPENDS_ON_COMPONENT]->(component2:Component)
+WHERE NOT
+  (component1)-[:DEFINES_DEPENDENCY]->(component2)
+WITH
+  component1, component2
+MATCH
+  (component1)-[:CONTAINS*]->(type1:Type),
+  (component2)-[:CONTAINS*]->(type2:Type),
+  (type1)-[:DEPENDS_ON]->(type2)
+RETURN
+  component1.name AS Component, type1 AS Type, component2 AS ComponentDependency, type2 AS TypeDependency
+----
+
+=== Reports
+
+[[component:ComponentDependencyReport]]
+[source,cypher,role=concept,requiresConcepts="component:ComponentDependency",reportType="plantuml-component-diagram"]
+.Diagram about existing dependencies between components.
+----
+MATCH
+  (component:Component:Package)
+OPTIONAL MATCH
+  (layer)-[dependsOnComponent:DEPENDS_ON_COMPONENT]->(:Component:Package)
+RETURN
+  *
+----
+
+[[component:ComponentDependencyGraphMLReport]]
+[source,cypher,role=concept,requiresConcepts="component:ComponentDependency",reportType="graphml"]
+.GraphML report about dependencies between components and their contained types.
+----
+MATCH
+  (component:Component:Package)-[:CONTAINS*]->(type:Type)
+OPTIONAL MATCH
+  (type)-[dependsOnComponent:DEPENDS_ON_COMPONENT]->(:Type)
+RETURN {
+  role : "graph",
+  parent : component,
+  nodes : collect(type),
+  relationships : collect(dependsOnComponent)
+} as TypesPerComponent
+----
+

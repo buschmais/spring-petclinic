@@ -1,0 +1,753 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:y="http://www.yworks.com/xml/graphml" xmlns:yed="http://www.yworks.com/xml/yed/3" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://www.yworks.com/xml/schema/graphml/1.1/ygraphml.xsd">
+
+  <key id="valid" for="node" attr.name="valid" attr.type="boolean"/>
+
+  <key id="sourceFileName" for="node" attr.name="sourceFileName" attr.type="string"/>
+
+  <key id="fileName" for="node" attr.name="fileName" attr.type="string"/>
+
+  <key id="fqn" for="node" attr.name="fqn" attr.type="string"/>
+
+  <key id="visibility" for="node" attr.name="visibility" attr.type="string"/>
+
+  <key id="name" for="node" attr.name="name" attr.type="string"/>
+
+  <key id="byteCodeVersion" for="node" attr.name="byteCodeVersion" attr.type="int"/>
+
+  <key id="labels" for="node" attr.name="labels" attr.type="string"/>
+
+  <key id="md5" for="node" attr.name="md5" attr.type="string"/>
+
+  <key for="graphml" id="d0" yfiles.type="resources"/>
+  <key for="port" id="d1" yfiles.type="portgraphics"/>
+  <key for="port" id="d2" yfiles.type="portgeometry"/>
+  <key for="port" id="d3" yfiles.type="portuserdata"/>
+  <key for="node" id="d6" yfiles.type="nodegraphics"/>
+  <key for="edge" id="d10" yfiles.type="edgegraphics"/>
+  <graph id="G59" edgedefault="directed">
+
+    <node id="n1600" yfiles.foldertype="folder" labels=":Class:Component:File:Java:Repository:Spring:Type">
+      <data key="labels">:Class:Component:File:Java:Repository:Spring:Type</data>
+      <data key="d6">
+        <y:ProxyAutoBoundsNode>
+          <y:Realizers active="1">
+            <y:GroupNode>
+              <y:Fill color="#FFFFFF" transparent="false"/>
+              <y:BorderStyle color="#000000" type="line" width="1.0"/>
+              <y:NodeLabel alignment="right" autoSizePolicy="node_width" backgroundColor="#FFFFFF" borderDistance="0.0" fontFamily="Dialog" fontSize="15" fontStyle="plain" hasLineColor="false" modelName="internal" modelPosition="t" textColor="#000000" visible="true" x="0.0" y="0.0"><![CDATA[org.springframework.samples.petclinic.repository.jpa.JpaVetRepositoryImpl]]></y:NodeLabel>
+              <y:Shape type="rectangle"/>
+              <y:DropShadow color="#D2D2D2" offsetX="4" offsetY="4"/>
+              <y:State closed="false" innerGraphDisplayEnabled="false"/>
+              <y:Insets bottom="15" bottomF="15.0" left="15" leftF="15.0" right="15" rightF="15.0" top="15" topF="15.0"/>
+              <y:BorderInsets bottom="15" bottomF="15.0" left="50" leftF="50.0" right="50" rightF="50.0" top="5" topF="5.0"/>
+            </y:GroupNode>
+            <y:GroupNode>
+              <y:Fill color="#FFFFFF" transparent="false"/>
+              <y:BorderStyle color="#000000" type="line" width="1.0"/>
+              <y:NodeLabel alignment="right" autoSizePolicy="node_width" backgroundColor="#FFFFFF" borderDistance="0.0" fontFamily="Dialog" fontSize="15" fontStyle="plain" hasLineColor="false" modelName="internal" modelPosition="t" textColor="#000000" visible="true" x="0.0" y="0.0"><![CDATA[org.springframework.samples.petclinic.repository.jpa.JpaVetRepositoryImpl]]></y:NodeLabel>
+              <y:Shape type="rectangle"/>
+              <y:DropShadow color="#D2D2D2" offsetX="4" offsetY="4"/>
+              <y:State closed="true" innerGraphDisplayEnabled="false"/>
+              <y:Insets bottom="15" bottomF="15.0" left="15" leftF="15.0" right="15" rightF="15.0" top="15" topF="15.0"/>
+              <y:BorderInsets bottom="0" bottomF="0.0" left="0" leftF="0.0" right="0" rightF="0.0" top="0" topF="0.0"/>
+            </y:GroupNode>
+          </y:Realizers>
+        </y:ProxyAutoBoundsNode>
+      </data>
+      <data key="valid">true</data>
+      <data key="sourceFileName">JpaVetRepositoryImpl.java</data>
+      <data key="fileName">/org/springframework/samples/petclinic/repository/jpa/JpaVetRepositoryImpl.class</data>
+      <data key="fqn">org.springframework.samples.petclinic.repository.jpa.JpaVetRepositoryImpl</data>
+      <data key="visibility">public</data>
+      <data key="name">JpaVetRepositoryImpl</data>
+      <data key="byteCodeVersion">51</data>
+      <data key="md5">2E11CBC57473D35D9F45AFD39D4C68FE</data>
+    </node>
+
+    <node id="n1569" yfiles.foldertype="folder" labels=":Class:Component:File:Java:Repository:Spring:Type">
+      <data key="labels">:Class:Component:File:Java:Repository:Spring:Type</data>
+      <data key="d6">
+        <y:ProxyAutoBoundsNode>
+          <y:Realizers active="1">
+            <y:GroupNode>
+              <y:Fill color="#FFFFFF" transparent="false"/>
+              <y:BorderStyle color="#000000" type="line" width="1.0"/>
+              <y:NodeLabel alignment="right" autoSizePolicy="node_width" backgroundColor="#FFFFFF" borderDistance="0.0" fontFamily="Dialog" fontSize="15" fontStyle="plain" hasLineColor="false" modelName="internal" modelPosition="t" textColor="#000000" visible="true" x="0.0" y="0.0"><![CDATA[org.springframework.samples.petclinic.repository.jpa.JpaOwnerRepositoryImpl]]></y:NodeLabel>
+              <y:Shape type="rectangle"/>
+              <y:DropShadow color="#D2D2D2" offsetX="4" offsetY="4"/>
+              <y:State closed="false" innerGraphDisplayEnabled="false"/>
+              <y:Insets bottom="15" bottomF="15.0" left="15" leftF="15.0" right="15" rightF="15.0" top="15" topF="15.0"/>
+              <y:BorderInsets bottom="15" bottomF="15.0" left="50" leftF="50.0" right="50" rightF="50.0" top="5" topF="5.0"/>
+            </y:GroupNode>
+            <y:GroupNode>
+              <y:Fill color="#FFFFFF" transparent="false"/>
+              <y:BorderStyle color="#000000" type="line" width="1.0"/>
+              <y:NodeLabel alignment="right" autoSizePolicy="node_width" backgroundColor="#FFFFFF" borderDistance="0.0" fontFamily="Dialog" fontSize="15" fontStyle="plain" hasLineColor="false" modelName="internal" modelPosition="t" textColor="#000000" visible="true" x="0.0" y="0.0"><![CDATA[org.springframework.samples.petclinic.repository.jpa.JpaOwnerRepositoryImpl]]></y:NodeLabel>
+              <y:Shape type="rectangle"/>
+              <y:DropShadow color="#D2D2D2" offsetX="4" offsetY="4"/>
+              <y:State closed="true" innerGraphDisplayEnabled="false"/>
+              <y:Insets bottom="15" bottomF="15.0" left="15" leftF="15.0" right="15" rightF="15.0" top="15" topF="15.0"/>
+              <y:BorderInsets bottom="0" bottomF="0.0" left="0" leftF="0.0" right="0" rightF="0.0" top="0" topF="0.0"/>
+            </y:GroupNode>
+          </y:Realizers>
+        </y:ProxyAutoBoundsNode>
+      </data>
+      <data key="valid">true</data>
+      <data key="sourceFileName">JpaOwnerRepositoryImpl.java</data>
+      <data key="fileName">/org/springframework/samples/petclinic/repository/jpa/JpaOwnerRepositoryImpl.class</data>
+      <data key="fqn">org.springframework.samples.petclinic.repository.jpa.JpaOwnerRepositoryImpl</data>
+      <data key="visibility">public</data>
+      <data key="name">JpaOwnerRepositoryImpl</data>
+      <data key="byteCodeVersion">51</data>
+      <data key="md5">BE5C1382CE4DD48C73BF8438850904DC</data>
+    </node>
+
+    <node id="n1985" yfiles.foldertype="folder" labels=":Class:Component:Controller:File:Java:Spring:Type">
+      <data key="labels">:Class:Component:Controller:File:Java:Spring:Type</data>
+      <data key="d6">
+        <y:ProxyAutoBoundsNode>
+          <y:Realizers active="1">
+            <y:GroupNode>
+              <y:Fill color="#FFFFFF" transparent="false"/>
+              <y:BorderStyle color="#000000" type="line" width="1.0"/>
+              <y:NodeLabel alignment="right" autoSizePolicy="node_width" backgroundColor="#FFFFFF" borderDistance="0.0" fontFamily="Dialog" fontSize="15" fontStyle="plain" hasLineColor="false" modelName="internal" modelPosition="t" textColor="#000000" visible="true" x="0.0" y="0.0"><![CDATA[org.springframework.samples.petclinic.web.VetController]]></y:NodeLabel>
+              <y:Shape type="rectangle"/>
+              <y:DropShadow color="#D2D2D2" offsetX="4" offsetY="4"/>
+              <y:State closed="false" innerGraphDisplayEnabled="false"/>
+              <y:Insets bottom="15" bottomF="15.0" left="15" leftF="15.0" right="15" rightF="15.0" top="15" topF="15.0"/>
+              <y:BorderInsets bottom="15" bottomF="15.0" left="50" leftF="50.0" right="50" rightF="50.0" top="5" topF="5.0"/>
+            </y:GroupNode>
+            <y:GroupNode>
+              <y:Fill color="#FFFFFF" transparent="false"/>
+              <y:BorderStyle color="#000000" type="line" width="1.0"/>
+              <y:NodeLabel alignment="right" autoSizePolicy="node_width" backgroundColor="#FFFFFF" borderDistance="0.0" fontFamily="Dialog" fontSize="15" fontStyle="plain" hasLineColor="false" modelName="internal" modelPosition="t" textColor="#000000" visible="true" x="0.0" y="0.0"><![CDATA[org.springframework.samples.petclinic.web.VetController]]></y:NodeLabel>
+              <y:Shape type="rectangle"/>
+              <y:DropShadow color="#D2D2D2" offsetX="4" offsetY="4"/>
+              <y:State closed="true" innerGraphDisplayEnabled="false"/>
+              <y:Insets bottom="15" bottomF="15.0" left="15" leftF="15.0" right="15" rightF="15.0" top="15" topF="15.0"/>
+              <y:BorderInsets bottom="0" bottomF="0.0" left="0" leftF="0.0" right="0" rightF="0.0" top="0" topF="0.0"/>
+            </y:GroupNode>
+          </y:Realizers>
+        </y:ProxyAutoBoundsNode>
+      </data>
+      <data key="valid">true</data>
+      <data key="sourceFileName">VetController.java</data>
+      <data key="fileName">/org/springframework/samples/petclinic/web/VetController.class</data>
+      <data key="fqn">org.springframework.samples.petclinic.web.VetController</data>
+      <data key="visibility">public</data>
+      <data key="name">VetController</data>
+      <data key="byteCodeVersion">51</data>
+      <data key="md5">51CD83B6CE3803361EEAA50673C4FEC3</data>
+    </node>
+
+    <node id="n1380" yfiles.foldertype="folder" labels=":Class:Component:File:Java:Repository:Spring:Type">
+      <data key="labels">:Class:Component:File:Java:Repository:Spring:Type</data>
+      <data key="d6">
+        <y:ProxyAutoBoundsNode>
+          <y:Realizers active="1">
+            <y:GroupNode>
+              <y:Fill color="#FFFFFF" transparent="false"/>
+              <y:BorderStyle color="#000000" type="line" width="1.0"/>
+              <y:NodeLabel alignment="right" autoSizePolicy="node_width" backgroundColor="#FFFFFF" borderDistance="0.0" fontFamily="Dialog" fontSize="15" fontStyle="plain" hasLineColor="false" modelName="internal" modelPosition="t" textColor="#000000" visible="true" x="0.0" y="0.0"><![CDATA[org.springframework.samples.petclinic.repository.jdbc.JdbcOwnerRepositoryImpl]]></y:NodeLabel>
+              <y:Shape type="rectangle"/>
+              <y:DropShadow color="#D2D2D2" offsetX="4" offsetY="4"/>
+              <y:State closed="false" innerGraphDisplayEnabled="false"/>
+              <y:Insets bottom="15" bottomF="15.0" left="15" leftF="15.0" right="15" rightF="15.0" top="15" topF="15.0"/>
+              <y:BorderInsets bottom="15" bottomF="15.0" left="50" leftF="50.0" right="50" rightF="50.0" top="5" topF="5.0"/>
+            </y:GroupNode>
+            <y:GroupNode>
+              <y:Fill color="#FFFFFF" transparent="false"/>
+              <y:BorderStyle color="#000000" type="line" width="1.0"/>
+              <y:NodeLabel alignment="right" autoSizePolicy="node_width" backgroundColor="#FFFFFF" borderDistance="0.0" fontFamily="Dialog" fontSize="15" fontStyle="plain" hasLineColor="false" modelName="internal" modelPosition="t" textColor="#000000" visible="true" x="0.0" y="0.0"><![CDATA[org.springframework.samples.petclinic.repository.jdbc.JdbcOwnerRepositoryImpl]]></y:NodeLabel>
+              <y:Shape type="rectangle"/>
+              <y:DropShadow color="#D2D2D2" offsetX="4" offsetY="4"/>
+              <y:State closed="true" innerGraphDisplayEnabled="false"/>
+              <y:Insets bottom="15" bottomF="15.0" left="15" leftF="15.0" right="15" rightF="15.0" top="15" topF="15.0"/>
+              <y:BorderInsets bottom="0" bottomF="0.0" left="0" leftF="0.0" right="0" rightF="0.0" top="0" topF="0.0"/>
+            </y:GroupNode>
+          </y:Realizers>
+        </y:ProxyAutoBoundsNode>
+      </data>
+      <data key="valid">true</data>
+      <data key="sourceFileName">JdbcOwnerRepositoryImpl.java</data>
+      <data key="fileName">/org/springframework/samples/petclinic/repository/jdbc/JdbcOwnerRepositoryImpl.class</data>
+      <data key="fqn">org.springframework.samples.petclinic.repository.jdbc.JdbcOwnerRepositoryImpl</data>
+      <data key="visibility">public</data>
+      <data key="name">JdbcOwnerRepositoryImpl</data>
+      <data key="byteCodeVersion">51</data>
+      <data key="md5">E96BFFE72E3B0DB45679B997F1600180</data>
+    </node>
+
+    <node id="n1544" yfiles.foldertype="folder" labels=":Class:Component:File:Java:Repository:Spring:Type">
+      <data key="labels">:Class:Component:File:Java:Repository:Spring:Type</data>
+      <data key="d6">
+        <y:ProxyAutoBoundsNode>
+          <y:Realizers active="1">
+            <y:GroupNode>
+              <y:Fill color="#FFFFFF" transparent="false"/>
+              <y:BorderStyle color="#000000" type="line" width="1.0"/>
+              <y:NodeLabel alignment="right" autoSizePolicy="node_width" backgroundColor="#FFFFFF" borderDistance="0.0" fontFamily="Dialog" fontSize="15" fontStyle="plain" hasLineColor="false" modelName="internal" modelPosition="t" textColor="#000000" visible="true" x="0.0" y="0.0"><![CDATA[org.springframework.samples.petclinic.repository.jdbc.JdbcVisitRepositoryImpl]]></y:NodeLabel>
+              <y:Shape type="rectangle"/>
+              <y:DropShadow color="#D2D2D2" offsetX="4" offsetY="4"/>
+              <y:State closed="false" innerGraphDisplayEnabled="false"/>
+              <y:Insets bottom="15" bottomF="15.0" left="15" leftF="15.0" right="15" rightF="15.0" top="15" topF="15.0"/>
+              <y:BorderInsets bottom="15" bottomF="15.0" left="50" leftF="50.0" right="50" rightF="50.0" top="5" topF="5.0"/>
+            </y:GroupNode>
+            <y:GroupNode>
+              <y:Fill color="#FFFFFF" transparent="false"/>
+              <y:BorderStyle color="#000000" type="line" width="1.0"/>
+              <y:NodeLabel alignment="right" autoSizePolicy="node_width" backgroundColor="#FFFFFF" borderDistance="0.0" fontFamily="Dialog" fontSize="15" fontStyle="plain" hasLineColor="false" modelName="internal" modelPosition="t" textColor="#000000" visible="true" x="0.0" y="0.0"><![CDATA[org.springframework.samples.petclinic.repository.jdbc.JdbcVisitRepositoryImpl]]></y:NodeLabel>
+              <y:Shape type="rectangle"/>
+              <y:DropShadow color="#D2D2D2" offsetX="4" offsetY="4"/>
+              <y:State closed="true" innerGraphDisplayEnabled="false"/>
+              <y:Insets bottom="15" bottomF="15.0" left="15" leftF="15.0" right="15" rightF="15.0" top="15" topF="15.0"/>
+              <y:BorderInsets bottom="0" bottomF="0.0" left="0" leftF="0.0" right="0" rightF="0.0" top="0" topF="0.0"/>
+            </y:GroupNode>
+          </y:Realizers>
+        </y:ProxyAutoBoundsNode>
+      </data>
+      <data key="valid">true</data>
+      <data key="sourceFileName">JdbcVisitRepositoryImpl.java</data>
+      <data key="fileName">/org/springframework/samples/petclinic/repository/jdbc/JdbcVisitRepositoryImpl.class</data>
+      <data key="fqn">org.springframework.samples.petclinic.repository.jdbc.JdbcVisitRepositoryImpl</data>
+      <data key="visibility">public</data>
+      <data key="name">JdbcVisitRepositoryImpl</data>
+      <data key="byteCodeVersion">51</data>
+      <data key="md5">367CCD0220F6F2079D5FBEE95A631A18</data>
+    </node>
+
+    <node id="n1610" yfiles.foldertype="folder" labels=":Class:Component:File:Java:Repository:Spring:Type">
+      <data key="labels">:Class:Component:File:Java:Repository:Spring:Type</data>
+      <data key="d6">
+        <y:ProxyAutoBoundsNode>
+          <y:Realizers active="1">
+            <y:GroupNode>
+              <y:Fill color="#FFFFFF" transparent="false"/>
+              <y:BorderStyle color="#000000" type="line" width="1.0"/>
+              <y:NodeLabel alignment="right" autoSizePolicy="node_width" backgroundColor="#FFFFFF" borderDistance="0.0" fontFamily="Dialog" fontSize="15" fontStyle="plain" hasLineColor="false" modelName="internal" modelPosition="t" textColor="#000000" visible="true" x="0.0" y="0.0"><![CDATA[org.springframework.samples.petclinic.repository.jpa.JpaVisitRepositoryImpl]]></y:NodeLabel>
+              <y:Shape type="rectangle"/>
+              <y:DropShadow color="#D2D2D2" offsetX="4" offsetY="4"/>
+              <y:State closed="false" innerGraphDisplayEnabled="false"/>
+              <y:Insets bottom="15" bottomF="15.0" left="15" leftF="15.0" right="15" rightF="15.0" top="15" topF="15.0"/>
+              <y:BorderInsets bottom="15" bottomF="15.0" left="50" leftF="50.0" right="50" rightF="50.0" top="5" topF="5.0"/>
+            </y:GroupNode>
+            <y:GroupNode>
+              <y:Fill color="#FFFFFF" transparent="false"/>
+              <y:BorderStyle color="#000000" type="line" width="1.0"/>
+              <y:NodeLabel alignment="right" autoSizePolicy="node_width" backgroundColor="#FFFFFF" borderDistance="0.0" fontFamily="Dialog" fontSize="15" fontStyle="plain" hasLineColor="false" modelName="internal" modelPosition="t" textColor="#000000" visible="true" x="0.0" y="0.0"><![CDATA[org.springframework.samples.petclinic.repository.jpa.JpaVisitRepositoryImpl]]></y:NodeLabel>
+              <y:Shape type="rectangle"/>
+              <y:DropShadow color="#D2D2D2" offsetX="4" offsetY="4"/>
+              <y:State closed="true" innerGraphDisplayEnabled="false"/>
+              <y:Insets bottom="15" bottomF="15.0" left="15" leftF="15.0" right="15" rightF="15.0" top="15" topF="15.0"/>
+              <y:BorderInsets bottom="0" bottomF="0.0" left="0" leftF="0.0" right="0" rightF="0.0" top="0" topF="0.0"/>
+            </y:GroupNode>
+          </y:Realizers>
+        </y:ProxyAutoBoundsNode>
+      </data>
+      <data key="valid">true</data>
+      <data key="sourceFileName">JpaVisitRepositoryImpl.java</data>
+      <data key="fileName">/org/springframework/samples/petclinic/repository/jpa/JpaVisitRepositoryImpl.class</data>
+      <data key="fqn">org.springframework.samples.petclinic.repository.jpa.JpaVisitRepositoryImpl</data>
+      <data key="visibility">public</data>
+      <data key="name">JpaVisitRepositoryImpl</data>
+      <data key="byteCodeVersion">51</data>
+      <data key="md5">B2365B98D55FBE5C4C85755436EC409D</data>
+    </node>
+
+    <node id="n1675" yfiles.foldertype="folder" labels=":Class:Component:File:Java:Service:Spring:Type">
+      <data key="labels">:Class:Component:File:Java:Service:Spring:Type</data>
+      <data key="d6">
+        <y:ProxyAutoBoundsNode>
+          <y:Realizers active="1">
+            <y:GroupNode>
+              <y:Fill color="#FFFFFF" transparent="false"/>
+              <y:BorderStyle color="#000000" type="line" width="1.0"/>
+              <y:NodeLabel alignment="right" autoSizePolicy="node_width" backgroundColor="#FFFFFF" borderDistance="0.0" fontFamily="Dialog" fontSize="15" fontStyle="plain" hasLineColor="false" modelName="internal" modelPosition="t" textColor="#000000" visible="true" x="0.0" y="0.0"><![CDATA[org.springframework.samples.petclinic.service.ClinicServiceImpl]]></y:NodeLabel>
+              <y:Shape type="rectangle"/>
+              <y:DropShadow color="#D2D2D2" offsetX="4" offsetY="4"/>
+              <y:State closed="false" innerGraphDisplayEnabled="false"/>
+              <y:Insets bottom="15" bottomF="15.0" left="15" leftF="15.0" right="15" rightF="15.0" top="15" topF="15.0"/>
+              <y:BorderInsets bottom="15" bottomF="15.0" left="50" leftF="50.0" right="50" rightF="50.0" top="5" topF="5.0"/>
+            </y:GroupNode>
+            <y:GroupNode>
+              <y:Fill color="#FFFFFF" transparent="false"/>
+              <y:BorderStyle color="#000000" type="line" width="1.0"/>
+              <y:NodeLabel alignment="right" autoSizePolicy="node_width" backgroundColor="#FFFFFF" borderDistance="0.0" fontFamily="Dialog" fontSize="15" fontStyle="plain" hasLineColor="false" modelName="internal" modelPosition="t" textColor="#000000" visible="true" x="0.0" y="0.0"><![CDATA[org.springframework.samples.petclinic.service.ClinicServiceImpl]]></y:NodeLabel>
+              <y:Shape type="rectangle"/>
+              <y:DropShadow color="#D2D2D2" offsetX="4" offsetY="4"/>
+              <y:State closed="true" innerGraphDisplayEnabled="false"/>
+              <y:Insets bottom="15" bottomF="15.0" left="15" leftF="15.0" right="15" rightF="15.0" top="15" topF="15.0"/>
+              <y:BorderInsets bottom="0" bottomF="0.0" left="0" leftF="0.0" right="0" rightF="0.0" top="0" topF="0.0"/>
+            </y:GroupNode>
+          </y:Realizers>
+        </y:ProxyAutoBoundsNode>
+      </data>
+      <data key="valid">true</data>
+      <data key="sourceFileName">ClinicServiceImpl.java</data>
+      <data key="fileName">/org/springframework/samples/petclinic/service/ClinicServiceImpl.class</data>
+      <data key="fqn">org.springframework.samples.petclinic.service.ClinicServiceImpl</data>
+      <data key="visibility">public</data>
+      <data key="name">ClinicServiceImpl</data>
+      <data key="byteCodeVersion">51</data>
+      <data key="md5">2BF43B68E94402A4357EA8A2A8B1B3E7</data>
+    </node>
+
+    <node id="n1451" yfiles.foldertype="folder" labels=":Class:Component:File:Java:Repository:Spring:Type">
+      <data key="labels">:Class:Component:File:Java:Repository:Spring:Type</data>
+      <data key="d6">
+        <y:ProxyAutoBoundsNode>
+          <y:Realizers active="1">
+            <y:GroupNode>
+              <y:Fill color="#FFFFFF" transparent="false"/>
+              <y:BorderStyle color="#000000" type="line" width="1.0"/>
+              <y:NodeLabel alignment="right" autoSizePolicy="node_width" backgroundColor="#FFFFFF" borderDistance="0.0" fontFamily="Dialog" fontSize="15" fontStyle="plain" hasLineColor="false" modelName="internal" modelPosition="t" textColor="#000000" visible="true" x="0.0" y="0.0"><![CDATA[org.springframework.samples.petclinic.repository.jdbc.JdbcPetRepositoryImpl]]></y:NodeLabel>
+              <y:Shape type="rectangle"/>
+              <y:DropShadow color="#D2D2D2" offsetX="4" offsetY="4"/>
+              <y:State closed="false" innerGraphDisplayEnabled="false"/>
+              <y:Insets bottom="15" bottomF="15.0" left="15" leftF="15.0" right="15" rightF="15.0" top="15" topF="15.0"/>
+              <y:BorderInsets bottom="15" bottomF="15.0" left="50" leftF="50.0" right="50" rightF="50.0" top="5" topF="5.0"/>
+            </y:GroupNode>
+            <y:GroupNode>
+              <y:Fill color="#FFFFFF" transparent="false"/>
+              <y:BorderStyle color="#000000" type="line" width="1.0"/>
+              <y:NodeLabel alignment="right" autoSizePolicy="node_width" backgroundColor="#FFFFFF" borderDistance="0.0" fontFamily="Dialog" fontSize="15" fontStyle="plain" hasLineColor="false" modelName="internal" modelPosition="t" textColor="#000000" visible="true" x="0.0" y="0.0"><![CDATA[org.springframework.samples.petclinic.repository.jdbc.JdbcPetRepositoryImpl]]></y:NodeLabel>
+              <y:Shape type="rectangle"/>
+              <y:DropShadow color="#D2D2D2" offsetX="4" offsetY="4"/>
+              <y:State closed="true" innerGraphDisplayEnabled="false"/>
+              <y:Insets bottom="15" bottomF="15.0" left="15" leftF="15.0" right="15" rightF="15.0" top="15" topF="15.0"/>
+              <y:BorderInsets bottom="0" bottomF="0.0" left="0" leftF="0.0" right="0" rightF="0.0" top="0" topF="0.0"/>
+            </y:GroupNode>
+          </y:Realizers>
+        </y:ProxyAutoBoundsNode>
+      </data>
+      <data key="valid">true</data>
+      <data key="sourceFileName">JdbcPetRepositoryImpl.java</data>
+      <data key="fileName">/org/springframework/samples/petclinic/repository/jdbc/JdbcPetRepositoryImpl.class</data>
+      <data key="fqn">org.springframework.samples.petclinic.repository.jdbc.JdbcPetRepositoryImpl</data>
+      <data key="visibility">public</data>
+      <data key="name">JdbcPetRepositoryImpl</data>
+      <data key="byteCodeVersion">51</data>
+      <data key="md5">672AAECA5BD15A4A6A203997634D9733</data>
+    </node>
+
+    <node id="n1646" yfiles.foldertype="folder" labels=":Component:File:Interface:Java:Repository:Spring:Type">
+      <data key="labels">:Component:File:Interface:Java:Repository:Spring:Type</data>
+      <data key="d6">
+        <y:ProxyAutoBoundsNode>
+          <y:Realizers active="1">
+            <y:GroupNode>
+              <y:Fill color="#FFFFFF" transparent="false"/>
+              <y:BorderStyle color="#000000" type="line" width="1.0"/>
+              <y:NodeLabel alignment="right" autoSizePolicy="node_width" backgroundColor="#FFFFFF" borderDistance="0.0" fontFamily="Dialog" fontSize="15" fontStyle="plain" hasLineColor="false" modelName="internal" modelPosition="t" textColor="#000000" visible="true" x="0.0" y="0.0"><![CDATA[org.springframework.samples.petclinic.repository.springdatajpa.SpringDataPetRepository]]></y:NodeLabel>
+              <y:Shape type="rectangle"/>
+              <y:DropShadow color="#D2D2D2" offsetX="4" offsetY="4"/>
+              <y:State closed="false" innerGraphDisplayEnabled="false"/>
+              <y:Insets bottom="15" bottomF="15.0" left="15" leftF="15.0" right="15" rightF="15.0" top="15" topF="15.0"/>
+              <y:BorderInsets bottom="15" bottomF="15.0" left="50" leftF="50.0" right="50" rightF="50.0" top="5" topF="5.0"/>
+            </y:GroupNode>
+            <y:GroupNode>
+              <y:Fill color="#FFFFFF" transparent="false"/>
+              <y:BorderStyle color="#000000" type="line" width="1.0"/>
+              <y:NodeLabel alignment="right" autoSizePolicy="node_width" backgroundColor="#FFFFFF" borderDistance="0.0" fontFamily="Dialog" fontSize="15" fontStyle="plain" hasLineColor="false" modelName="internal" modelPosition="t" textColor="#000000" visible="true" x="0.0" y="0.0"><![CDATA[org.springframework.samples.petclinic.repository.springdatajpa.SpringDataPetRepository]]></y:NodeLabel>
+              <y:Shape type="rectangle"/>
+              <y:DropShadow color="#D2D2D2" offsetX="4" offsetY="4"/>
+              <y:State closed="true" innerGraphDisplayEnabled="false"/>
+              <y:Insets bottom="15" bottomF="15.0" left="15" leftF="15.0" right="15" rightF="15.0" top="15" topF="15.0"/>
+              <y:BorderInsets bottom="0" bottomF="0.0" left="0" leftF="0.0" right="0" rightF="0.0" top="0" topF="0.0"/>
+            </y:GroupNode>
+          </y:Realizers>
+        </y:ProxyAutoBoundsNode>
+      </data>
+      <data key="valid">true</data>
+      <data key="sourceFileName">SpringDataPetRepository.java</data>
+      <data key="fileName">/org/springframework/samples/petclinic/repository/springdatajpa/SpringDataPetRepository.class</data>
+      <data key="fqn">org.springframework.samples.petclinic.repository.springdatajpa.SpringDataPetRepository</data>
+      <data key="visibility">public</data>
+      <data key="name">SpringDataPetRepository</data>
+      <data key="byteCodeVersion">51</data>
+      <data key="md5">0692295971EA33468706B3CBBBF03810</data>
+    </node>
+
+    <node id="n1520" yfiles.foldertype="folder" labels=":Class:Component:File:Java:Repository:Spring:Type">
+      <data key="labels">:Class:Component:File:Java:Repository:Spring:Type</data>
+      <data key="d6">
+        <y:ProxyAutoBoundsNode>
+          <y:Realizers active="1">
+            <y:GroupNode>
+              <y:Fill color="#FFFFFF" transparent="false"/>
+              <y:BorderStyle color="#000000" type="line" width="1.0"/>
+              <y:NodeLabel alignment="right" autoSizePolicy="node_width" backgroundColor="#FFFFFF" borderDistance="0.0" fontFamily="Dialog" fontSize="15" fontStyle="plain" hasLineColor="false" modelName="internal" modelPosition="t" textColor="#000000" visible="true" x="0.0" y="0.0"><![CDATA[org.springframework.samples.petclinic.repository.jdbc.JdbcVetRepositoryImpl]]></y:NodeLabel>
+              <y:Shape type="rectangle"/>
+              <y:DropShadow color="#D2D2D2" offsetX="4" offsetY="4"/>
+              <y:State closed="false" innerGraphDisplayEnabled="false"/>
+              <y:Insets bottom="15" bottomF="15.0" left="15" leftF="15.0" right="15" rightF="15.0" top="15" topF="15.0"/>
+              <y:BorderInsets bottom="15" bottomF="15.0" left="50" leftF="50.0" right="50" rightF="50.0" top="5" topF="5.0"/>
+            </y:GroupNode>
+            <y:GroupNode>
+              <y:Fill color="#FFFFFF" transparent="false"/>
+              <y:BorderStyle color="#000000" type="line" width="1.0"/>
+              <y:NodeLabel alignment="right" autoSizePolicy="node_width" backgroundColor="#FFFFFF" borderDistance="0.0" fontFamily="Dialog" fontSize="15" fontStyle="plain" hasLineColor="false" modelName="internal" modelPosition="t" textColor="#000000" visible="true" x="0.0" y="0.0"><![CDATA[org.springframework.samples.petclinic.repository.jdbc.JdbcVetRepositoryImpl]]></y:NodeLabel>
+              <y:Shape type="rectangle"/>
+              <y:DropShadow color="#D2D2D2" offsetX="4" offsetY="4"/>
+              <y:State closed="true" innerGraphDisplayEnabled="false"/>
+              <y:Insets bottom="15" bottomF="15.0" left="15" leftF="15.0" right="15" rightF="15.0" top="15" topF="15.0"/>
+              <y:BorderInsets bottom="0" bottomF="0.0" left="0" leftF="0.0" right="0" rightF="0.0" top="0" topF="0.0"/>
+            </y:GroupNode>
+          </y:Realizers>
+        </y:ProxyAutoBoundsNode>
+      </data>
+      <data key="valid">true</data>
+      <data key="sourceFileName">JdbcVetRepositoryImpl.java</data>
+      <data key="fileName">/org/springframework/samples/petclinic/repository/jdbc/JdbcVetRepositoryImpl.class</data>
+      <data key="fqn">org.springframework.samples.petclinic.repository.jdbc.JdbcVetRepositoryImpl</data>
+      <data key="visibility">public</data>
+      <data key="name">JdbcVetRepositoryImpl</data>
+      <data key="byteCodeVersion">51</data>
+      <data key="md5">9116B4B9DFF88EF9E4B455420A7A4B73</data>
+    </node>
+
+    <node id="n1650" yfiles.foldertype="folder" labels=":Component:File:Interface:Java:Repository:Spring:Type">
+      <data key="labels">:Component:File:Interface:Java:Repository:Spring:Type</data>
+      <data key="d6">
+        <y:ProxyAutoBoundsNode>
+          <y:Realizers active="1">
+            <y:GroupNode>
+              <y:Fill color="#FFFFFF" transparent="false"/>
+              <y:BorderStyle color="#000000" type="line" width="1.0"/>
+              <y:NodeLabel alignment="right" autoSizePolicy="node_width" backgroundColor="#FFFFFF" borderDistance="0.0" fontFamily="Dialog" fontSize="15" fontStyle="plain" hasLineColor="false" modelName="internal" modelPosition="t" textColor="#000000" visible="true" x="0.0" y="0.0"><![CDATA[org.springframework.samples.petclinic.repository.springdatajpa.SpringDataVetRepository]]></y:NodeLabel>
+              <y:Shape type="rectangle"/>
+              <y:DropShadow color="#D2D2D2" offsetX="4" offsetY="4"/>
+              <y:State closed="false" innerGraphDisplayEnabled="false"/>
+              <y:Insets bottom="15" bottomF="15.0" left="15" leftF="15.0" right="15" rightF="15.0" top="15" topF="15.0"/>
+              <y:BorderInsets bottom="15" bottomF="15.0" left="50" leftF="50.0" right="50" rightF="50.0" top="5" topF="5.0"/>
+            </y:GroupNode>
+            <y:GroupNode>
+              <y:Fill color="#FFFFFF" transparent="false"/>
+              <y:BorderStyle color="#000000" type="line" width="1.0"/>
+              <y:NodeLabel alignment="right" autoSizePolicy="node_width" backgroundColor="#FFFFFF" borderDistance="0.0" fontFamily="Dialog" fontSize="15" fontStyle="plain" hasLineColor="false" modelName="internal" modelPosition="t" textColor="#000000" visible="true" x="0.0" y="0.0"><![CDATA[org.springframework.samples.petclinic.repository.springdatajpa.SpringDataVetRepository]]></y:NodeLabel>
+              <y:Shape type="rectangle"/>
+              <y:DropShadow color="#D2D2D2" offsetX="4" offsetY="4"/>
+              <y:State closed="true" innerGraphDisplayEnabled="false"/>
+              <y:Insets bottom="15" bottomF="15.0" left="15" leftF="15.0" right="15" rightF="15.0" top="15" topF="15.0"/>
+              <y:BorderInsets bottom="0" bottomF="0.0" left="0" leftF="0.0" right="0" rightF="0.0" top="0" topF="0.0"/>
+            </y:GroupNode>
+          </y:Realizers>
+        </y:ProxyAutoBoundsNode>
+      </data>
+      <data key="valid">true</data>
+      <data key="sourceFileName">SpringDataVetRepository.java</data>
+      <data key="fileName">/org/springframework/samples/petclinic/repository/springdatajpa/SpringDataVetRepository.class</data>
+      <data key="fqn">org.springframework.samples.petclinic.repository.springdatajpa.SpringDataVetRepository</data>
+      <data key="visibility">public</data>
+      <data key="name">SpringDataVetRepository</data>
+      <data key="byteCodeVersion">51</data>
+      <data key="md5">65E0C620BE903E5BF8BB83077332424A</data>
+    </node>
+
+    <node id="n1874" yfiles.foldertype="folder" labels=":Class:Component:Controller:File:Java:Spring:Type">
+      <data key="labels">:Class:Component:Controller:File:Java:Spring:Type</data>
+      <data key="d6">
+        <y:ProxyAutoBoundsNode>
+          <y:Realizers active="1">
+            <y:GroupNode>
+              <y:Fill color="#FFFFFF" transparent="false"/>
+              <y:BorderStyle color="#000000" type="line" width="1.0"/>
+              <y:NodeLabel alignment="right" autoSizePolicy="node_width" backgroundColor="#FFFFFF" borderDistance="0.0" fontFamily="Dialog" fontSize="15" fontStyle="plain" hasLineColor="false" modelName="internal" modelPosition="t" textColor="#000000" visible="true" x="0.0" y="0.0"><![CDATA[org.springframework.samples.petclinic.web.PetController]]></y:NodeLabel>
+              <y:Shape type="rectangle"/>
+              <y:DropShadow color="#D2D2D2" offsetX="4" offsetY="4"/>
+              <y:State closed="false" innerGraphDisplayEnabled="false"/>
+              <y:Insets bottom="15" bottomF="15.0" left="15" leftF="15.0" right="15" rightF="15.0" top="15" topF="15.0"/>
+              <y:BorderInsets bottom="15" bottomF="15.0" left="50" leftF="50.0" right="50" rightF="50.0" top="5" topF="5.0"/>
+            </y:GroupNode>
+            <y:GroupNode>
+              <y:Fill color="#FFFFFF" transparent="false"/>
+              <y:BorderStyle color="#000000" type="line" width="1.0"/>
+              <y:NodeLabel alignment="right" autoSizePolicy="node_width" backgroundColor="#FFFFFF" borderDistance="0.0" fontFamily="Dialog" fontSize="15" fontStyle="plain" hasLineColor="false" modelName="internal" modelPosition="t" textColor="#000000" visible="true" x="0.0" y="0.0"><![CDATA[org.springframework.samples.petclinic.web.PetController]]></y:NodeLabel>
+              <y:Shape type="rectangle"/>
+              <y:DropShadow color="#D2D2D2" offsetX="4" offsetY="4"/>
+              <y:State closed="true" innerGraphDisplayEnabled="false"/>
+              <y:Insets bottom="15" bottomF="15.0" left="15" leftF="15.0" right="15" rightF="15.0" top="15" topF="15.0"/>
+              <y:BorderInsets bottom="0" bottomF="0.0" left="0" leftF="0.0" right="0" rightF="0.0" top="0" topF="0.0"/>
+            </y:GroupNode>
+          </y:Realizers>
+        </y:ProxyAutoBoundsNode>
+      </data>
+      <data key="valid">true</data>
+      <data key="sourceFileName">PetController.java</data>
+      <data key="fileName">/org/springframework/samples/petclinic/web/PetController.class</data>
+      <data key="fqn">org.springframework.samples.petclinic.web.PetController</data>
+      <data key="visibility">public</data>
+      <data key="name">PetController</data>
+      <data key="byteCodeVersion">51</data>
+      <data key="md5">22296E1FBB541125511BA0784B3EF98E</data>
+    </node>
+
+    <node id="n1651" yfiles.foldertype="folder" labels=":Component:File:Interface:Java:Repository:Spring:Type">
+      <data key="labels">:Component:File:Interface:Java:Repository:Spring:Type</data>
+      <data key="d6">
+        <y:ProxyAutoBoundsNode>
+          <y:Realizers active="1">
+            <y:GroupNode>
+              <y:Fill color="#FFFFFF" transparent="false"/>
+              <y:BorderStyle color="#000000" type="line" width="1.0"/>
+              <y:NodeLabel alignment="right" autoSizePolicy="node_width" backgroundColor="#FFFFFF" borderDistance="0.0" fontFamily="Dialog" fontSize="15" fontStyle="plain" hasLineColor="false" modelName="internal" modelPosition="t" textColor="#000000" visible="true" x="0.0" y="0.0"><![CDATA[org.springframework.samples.petclinic.repository.springdatajpa.SpringDataVisitRepository]]></y:NodeLabel>
+              <y:Shape type="rectangle"/>
+              <y:DropShadow color="#D2D2D2" offsetX="4" offsetY="4"/>
+              <y:State closed="false" innerGraphDisplayEnabled="false"/>
+              <y:Insets bottom="15" bottomF="15.0" left="15" leftF="15.0" right="15" rightF="15.0" top="15" topF="15.0"/>
+              <y:BorderInsets bottom="15" bottomF="15.0" left="50" leftF="50.0" right="50" rightF="50.0" top="5" topF="5.0"/>
+            </y:GroupNode>
+            <y:GroupNode>
+              <y:Fill color="#FFFFFF" transparent="false"/>
+              <y:BorderStyle color="#000000" type="line" width="1.0"/>
+              <y:NodeLabel alignment="right" autoSizePolicy="node_width" backgroundColor="#FFFFFF" borderDistance="0.0" fontFamily="Dialog" fontSize="15" fontStyle="plain" hasLineColor="false" modelName="internal" modelPosition="t" textColor="#000000" visible="true" x="0.0" y="0.0"><![CDATA[org.springframework.samples.petclinic.repository.springdatajpa.SpringDataVisitRepository]]></y:NodeLabel>
+              <y:Shape type="rectangle"/>
+              <y:DropShadow color="#D2D2D2" offsetX="4" offsetY="4"/>
+              <y:State closed="true" innerGraphDisplayEnabled="false"/>
+              <y:Insets bottom="15" bottomF="15.0" left="15" leftF="15.0" right="15" rightF="15.0" top="15" topF="15.0"/>
+              <y:BorderInsets bottom="0" bottomF="0.0" left="0" leftF="0.0" right="0" rightF="0.0" top="0" topF="0.0"/>
+            </y:GroupNode>
+          </y:Realizers>
+        </y:ProxyAutoBoundsNode>
+      </data>
+      <data key="valid">true</data>
+      <data key="sourceFileName">SpringDataVisitRepository.java</data>
+      <data key="fileName">/org/springframework/samples/petclinic/repository/springdatajpa/SpringDataVisitRepository.class</data>
+      <data key="fqn">org.springframework.samples.petclinic.repository.springdatajpa.SpringDataVisitRepository</data>
+      <data key="visibility">public</data>
+      <data key="name">SpringDataVisitRepository</data>
+      <data key="byteCodeVersion">51</data>
+      <data key="md5">E6205335807770C50A2EB4E396BA6AFD</data>
+    </node>
+
+    <node id="n2003" yfiles.foldertype="folder" labels=":Class:Component:Controller:File:Java:Spring:Type">
+      <data key="labels">:Class:Component:Controller:File:Java:Spring:Type</data>
+      <data key="d6">
+        <y:ProxyAutoBoundsNode>
+          <y:Realizers active="1">
+            <y:GroupNode>
+              <y:Fill color="#FFFFFF" transparent="false"/>
+              <y:BorderStyle color="#000000" type="line" width="1.0"/>
+              <y:NodeLabel alignment="right" autoSizePolicy="node_width" backgroundColor="#FFFFFF" borderDistance="0.0" fontFamily="Dialog" fontSize="15" fontStyle="plain" hasLineColor="false" modelName="internal" modelPosition="t" textColor="#000000" visible="true" x="0.0" y="0.0"><![CDATA[org.springframework.samples.petclinic.web.VisitController]]></y:NodeLabel>
+              <y:Shape type="rectangle"/>
+              <y:DropShadow color="#D2D2D2" offsetX="4" offsetY="4"/>
+              <y:State closed="false" innerGraphDisplayEnabled="false"/>
+              <y:Insets bottom="15" bottomF="15.0" left="15" leftF="15.0" right="15" rightF="15.0" top="15" topF="15.0"/>
+              <y:BorderInsets bottom="15" bottomF="15.0" left="50" leftF="50.0" right="50" rightF="50.0" top="5" topF="5.0"/>
+            </y:GroupNode>
+            <y:GroupNode>
+              <y:Fill color="#FFFFFF" transparent="false"/>
+              <y:BorderStyle color="#000000" type="line" width="1.0"/>
+              <y:NodeLabel alignment="right" autoSizePolicy="node_width" backgroundColor="#FFFFFF" borderDistance="0.0" fontFamily="Dialog" fontSize="15" fontStyle="plain" hasLineColor="false" modelName="internal" modelPosition="t" textColor="#000000" visible="true" x="0.0" y="0.0"><![CDATA[org.springframework.samples.petclinic.web.VisitController]]></y:NodeLabel>
+              <y:Shape type="rectangle"/>
+              <y:DropShadow color="#D2D2D2" offsetX="4" offsetY="4"/>
+              <y:State closed="true" innerGraphDisplayEnabled="false"/>
+              <y:Insets bottom="15" bottomF="15.0" left="15" leftF="15.0" right="15" rightF="15.0" top="15" topF="15.0"/>
+              <y:BorderInsets bottom="0" bottomF="0.0" left="0" leftF="0.0" right="0" rightF="0.0" top="0" topF="0.0"/>
+            </y:GroupNode>
+          </y:Realizers>
+        </y:ProxyAutoBoundsNode>
+      </data>
+      <data key="valid">true</data>
+      <data key="sourceFileName">VisitController.java</data>
+      <data key="fileName">/org/springframework/samples/petclinic/web/VisitController.class</data>
+      <data key="fqn">org.springframework.samples.petclinic.web.VisitController</data>
+      <data key="visibility">public</data>
+      <data key="name">VisitController</data>
+      <data key="byteCodeVersion">51</data>
+      <data key="md5">7E0FA8E5A6E66CE615D0F15C7A7F753C</data>
+    </node>
+
+    <node id="n1589" yfiles.foldertype="folder" labels=":Class:Component:File:Java:Repository:Spring:Type">
+      <data key="labels">:Class:Component:File:Java:Repository:Spring:Type</data>
+      <data key="d6">
+        <y:ProxyAutoBoundsNode>
+          <y:Realizers active="1">
+            <y:GroupNode>
+              <y:Fill color="#FFFFFF" transparent="false"/>
+              <y:BorderStyle color="#000000" type="line" width="1.0"/>
+              <y:NodeLabel alignment="right" autoSizePolicy="node_width" backgroundColor="#FFFFFF" borderDistance="0.0" fontFamily="Dialog" fontSize="15" fontStyle="plain" hasLineColor="false" modelName="internal" modelPosition="t" textColor="#000000" visible="true" x="0.0" y="0.0"><![CDATA[org.springframework.samples.petclinic.repository.jpa.JpaPetRepositoryImpl]]></y:NodeLabel>
+              <y:Shape type="rectangle"/>
+              <y:DropShadow color="#D2D2D2" offsetX="4" offsetY="4"/>
+              <y:State closed="false" innerGraphDisplayEnabled="false"/>
+              <y:Insets bottom="15" bottomF="15.0" left="15" leftF="15.0" right="15" rightF="15.0" top="15" topF="15.0"/>
+              <y:BorderInsets bottom="15" bottomF="15.0" left="50" leftF="50.0" right="50" rightF="50.0" top="5" topF="5.0"/>
+            </y:GroupNode>
+            <y:GroupNode>
+              <y:Fill color="#FFFFFF" transparent="false"/>
+              <y:BorderStyle color="#000000" type="line" width="1.0"/>
+              <y:NodeLabel alignment="right" autoSizePolicy="node_width" backgroundColor="#FFFFFF" borderDistance="0.0" fontFamily="Dialog" fontSize="15" fontStyle="plain" hasLineColor="false" modelName="internal" modelPosition="t" textColor="#000000" visible="true" x="0.0" y="0.0"><![CDATA[org.springframework.samples.petclinic.repository.jpa.JpaPetRepositoryImpl]]></y:NodeLabel>
+              <y:Shape type="rectangle"/>
+              <y:DropShadow color="#D2D2D2" offsetX="4" offsetY="4"/>
+              <y:State closed="true" innerGraphDisplayEnabled="false"/>
+              <y:Insets bottom="15" bottomF="15.0" left="15" leftF="15.0" right="15" rightF="15.0" top="15" topF="15.0"/>
+              <y:BorderInsets bottom="0" bottomF="0.0" left="0" leftF="0.0" right="0" rightF="0.0" top="0" topF="0.0"/>
+            </y:GroupNode>
+          </y:Realizers>
+        </y:ProxyAutoBoundsNode>
+      </data>
+      <data key="valid">true</data>
+      <data key="sourceFileName">JpaPetRepositoryImpl.java</data>
+      <data key="fileName">/org/springframework/samples/petclinic/repository/jpa/JpaPetRepositoryImpl.class</data>
+      <data key="fqn">org.springframework.samples.petclinic.repository.jpa.JpaPetRepositoryImpl</data>
+      <data key="visibility">public</data>
+      <data key="name">JpaPetRepositoryImpl</data>
+      <data key="byteCodeVersion">51</data>
+      <data key="md5">7EB62A9D7138CA054B58B3518AA5A1D9</data>
+    </node>
+
+    <node id="n1784" yfiles.foldertype="folder" labels=":Class:Component:Controller:File:Java:Spring:Type">
+      <data key="labels">:Class:Component:Controller:File:Java:Spring:Type</data>
+      <data key="d6">
+        <y:ProxyAutoBoundsNode>
+          <y:Realizers active="1">
+            <y:GroupNode>
+              <y:Fill color="#FFFFFF" transparent="false"/>
+              <y:BorderStyle color="#000000" type="line" width="1.0"/>
+              <y:NodeLabel alignment="right" autoSizePolicy="node_width" backgroundColor="#FFFFFF" borderDistance="0.0" fontFamily="Dialog" fontSize="15" fontStyle="plain" hasLineColor="false" modelName="internal" modelPosition="t" textColor="#000000" visible="true" x="0.0" y="0.0"><![CDATA[org.springframework.samples.petclinic.web.OwnerController]]></y:NodeLabel>
+              <y:Shape type="rectangle"/>
+              <y:DropShadow color="#D2D2D2" offsetX="4" offsetY="4"/>
+              <y:State closed="false" innerGraphDisplayEnabled="false"/>
+              <y:Insets bottom="15" bottomF="15.0" left="15" leftF="15.0" right="15" rightF="15.0" top="15" topF="15.0"/>
+              <y:BorderInsets bottom="15" bottomF="15.0" left="50" leftF="50.0" right="50" rightF="50.0" top="5" topF="5.0"/>
+            </y:GroupNode>
+            <y:GroupNode>
+              <y:Fill color="#FFFFFF" transparent="false"/>
+              <y:BorderStyle color="#000000" type="line" width="1.0"/>
+              <y:NodeLabel alignment="right" autoSizePolicy="node_width" backgroundColor="#FFFFFF" borderDistance="0.0" fontFamily="Dialog" fontSize="15" fontStyle="plain" hasLineColor="false" modelName="internal" modelPosition="t" textColor="#000000" visible="true" x="0.0" y="0.0"><![CDATA[org.springframework.samples.petclinic.web.OwnerController]]></y:NodeLabel>
+              <y:Shape type="rectangle"/>
+              <y:DropShadow color="#D2D2D2" offsetX="4" offsetY="4"/>
+              <y:State closed="true" innerGraphDisplayEnabled="false"/>
+              <y:Insets bottom="15" bottomF="15.0" left="15" leftF="15.0" right="15" rightF="15.0" top="15" topF="15.0"/>
+              <y:BorderInsets bottom="0" bottomF="0.0" left="0" leftF="0.0" right="0" rightF="0.0" top="0" topF="0.0"/>
+            </y:GroupNode>
+          </y:Realizers>
+        </y:ProxyAutoBoundsNode>
+      </data>
+      <data key="valid">true</data>
+      <data key="sourceFileName">OwnerController.java</data>
+      <data key="fileName">/org/springframework/samples/petclinic/web/OwnerController.class</data>
+      <data key="fqn">org.springframework.samples.petclinic.web.OwnerController</data>
+      <data key="visibility">public</data>
+      <data key="name">OwnerController</data>
+      <data key="byteCodeVersion">51</data>
+      <data key="md5">4B2C2C3E37D4501C42DE787B0FE4E3A0</data>
+    </node>
+
+    <node id="n1630" yfiles.foldertype="folder" labels=":Component:File:Interface:Java:Repository:Spring:Type">
+      <data key="labels">:Component:File:Interface:Java:Repository:Spring:Type</data>
+      <data key="d6">
+        <y:ProxyAutoBoundsNode>
+          <y:Realizers active="1">
+            <y:GroupNode>
+              <y:Fill color="#FFFFFF" transparent="false"/>
+              <y:BorderStyle color="#000000" type="line" width="1.0"/>
+              <y:NodeLabel alignment="right" autoSizePolicy="node_width" backgroundColor="#FFFFFF" borderDistance="0.0" fontFamily="Dialog" fontSize="15" fontStyle="plain" hasLineColor="false" modelName="internal" modelPosition="t" textColor="#000000" visible="true" x="0.0" y="0.0"><![CDATA[org.springframework.samples.petclinic.repository.springdatajpa.SpringDataOwnerRepository]]></y:NodeLabel>
+              <y:Shape type="rectangle"/>
+              <y:DropShadow color="#D2D2D2" offsetX="4" offsetY="4"/>
+              <y:State closed="false" innerGraphDisplayEnabled="false"/>
+              <y:Insets bottom="15" bottomF="15.0" left="15" leftF="15.0" right="15" rightF="15.0" top="15" topF="15.0"/>
+              <y:BorderInsets bottom="15" bottomF="15.0" left="50" leftF="50.0" right="50" rightF="50.0" top="5" topF="5.0"/>
+            </y:GroupNode>
+            <y:GroupNode>
+              <y:Fill color="#FFFFFF" transparent="false"/>
+              <y:BorderStyle color="#000000" type="line" width="1.0"/>
+              <y:NodeLabel alignment="right" autoSizePolicy="node_width" backgroundColor="#FFFFFF" borderDistance="0.0" fontFamily="Dialog" fontSize="15" fontStyle="plain" hasLineColor="false" modelName="internal" modelPosition="t" textColor="#000000" visible="true" x="0.0" y="0.0"><![CDATA[org.springframework.samples.petclinic.repository.springdatajpa.SpringDataOwnerRepository]]></y:NodeLabel>
+              <y:Shape type="rectangle"/>
+              <y:DropShadow color="#D2D2D2" offsetX="4" offsetY="4"/>
+              <y:State closed="true" innerGraphDisplayEnabled="false"/>
+              <y:Insets bottom="15" bottomF="15.0" left="15" leftF="15.0" right="15" rightF="15.0" top="15" topF="15.0"/>
+              <y:BorderInsets bottom="0" bottomF="0.0" left="0" leftF="0.0" right="0" rightF="0.0" top="0" topF="0.0"/>
+            </y:GroupNode>
+          </y:Realizers>
+        </y:ProxyAutoBoundsNode>
+      </data>
+      <data key="valid">true</data>
+      <data key="sourceFileName">SpringDataOwnerRepository.java</data>
+      <data key="fileName">/org/springframework/samples/petclinic/repository/springdatajpa/SpringDataOwnerRepository.class</data>
+      <data key="fqn">org.springframework.samples.petclinic.repository.springdatajpa.SpringDataOwnerRepository</data>
+      <data key="visibility">public</data>
+      <data key="name">SpringDataOwnerRepository</data>
+      <data key="byteCodeVersion">51</data>
+      <data key="md5">1DCD57B50736DCA53A4E9BCB8E419884</data>
+    </node>
+</graph>
+
+  <edge id="e47648" source="n1451" target="n1630" label="USES">
+    <data key="label">USES</data>
+  </edge>
+
+  <edge id="e47649" source="n1675" target="n1451" label="USES">
+    <data key="label">USES</data>
+  </edge>
+
+  <edge id="e47650" source="n1675" target="n1589" label="USES">
+    <data key="label">USES</data>
+  </edge>
+
+  <edge id="e47651" source="n1675" target="n1646" label="USES">
+    <data key="label">USES</data>
+  </edge>
+
+  <edge id="e47652" source="n1675" target="n1544" label="USES">
+    <data key="label">USES</data>
+  </edge>
+
+  <edge id="e47653" source="n1675" target="n1610" label="USES">
+    <data key="label">USES</data>
+  </edge>
+
+  <edge id="e47654" source="n1675" target="n1651" label="USES">
+    <data key="label">USES</data>
+  </edge>
+
+  <edge id="e47655" source="n1675" target="n1520" label="USES">
+    <data key="label">USES</data>
+  </edge>
+
+  <edge id="e47656" source="n1675" target="n1600" label="USES">
+    <data key="label">USES</data>
+  </edge>
+
+  <edge id="e47657" source="n1675" target="n1650" label="USES">
+    <data key="label">USES</data>
+  </edge>
+
+  <edge id="e47658" source="n1874" target="n1675" label="USES">
+    <data key="label">USES</data>
+  </edge>
+
+  <edge id="e47659" source="n1784" target="n1675" label="USES">
+    <data key="label">USES</data>
+  </edge>
+
+  <edge id="e47660" source="n2003" target="n1675" label="USES">
+    <data key="label">USES</data>
+  </edge>
+
+  <edge id="e47661" source="n1985" target="n1675" label="USES">
+    <data key="label">USES</data>
+  </edge>
+
+  <edge id="e47643" source="n1675" target="n1380" label="USES">
+    <data key="label">USES</data>
+  </edge>
+
+  <edge id="e47644" source="n1451" target="n1380" label="USES">
+    <data key="label">USES</data>
+  </edge>
+
+  <edge id="e47645" source="n1675" target="n1569" label="USES">
+    <data key="label">USES</data>
+  </edge>
+
+  <edge id="e47646" source="n1451" target="n1569" label="USES">
+    <data key="label">USES</data>
+  </edge>
+
+  <edge id="e47647" source="n1675" target="n1630" label="USES">
+    <data key="label">USES</data>
+  </edge>
+</graphml>

@@ -1,0 +1,8 @@
+@startuml
+skinparam componentStyle uml2
+  [org.springframework.samples:spring-petclinic:war:4.2.6-SNAPSHOT] <<Artifact Container Directory File Java Main Maven>> as n36
+  [org.springframework.samples:spring-petclinic:test-jar:4.2.6-SNAPSHOT] <<Artifact Container Directory File Java Maven>> as n37
+
+n37 --> n36 : DEPENDS_ON
+
+@enduml

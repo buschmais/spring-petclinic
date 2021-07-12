@@ -1,0 +1,52 @@
+[[business:Default]]
+[role=group,includesConcepts="business:*"]
+== Business
+
+This section describes the application from the business' perspective.
+
+=== Concepts
+
+[[business:Subdomain]]
+.The Spring PetClinic application consists of several business sub domains that can be identified by naming conventions. A type is labeled with `SubDomain` if its name contains the name of the subdomain.
+[source,cypher,role=concept]
+----
+UNWIND [
+    { name: "Clinic" },
+    { name: "Owner" },
+    { name: "Person" }, 
+    { name: "Pet" },
+    { name: "Specialty" },
+    { name: "Vet" }, 
+    { name: "Visit" }
+]
+AS properties
+MERGE (s:Subdomain{name:properties.name})
+WITH s
+    MATCH (t:Type)
+        WHERE t.name CONTAINS s.name
+    MERGE (t)-[:BELONGS_TO]->(s)
+RETURN s.name as Subdomain, COUNT(t) as Types
+----
+
+
+[[business:SubdomainDependency]]
+.A subdomain depends on another subdomain if there are Java type dependencies between them. These dependencies are represented by `DEPENDS_ON` relations.
+[source,cypher,role=concept,requiresConcepts="business:Subdomain"]
+----
+MATCH
+  (t1:Type)-[:BELONGS_TO]->(s1:Subdomain),
+  (t2:Type)-[:BELONGS_TO]->(s2:Subdomain),
+  (t1)-[d:DEPENDS_ON]->(t2)
+WHERE
+  s1 <> s2
+WITH
+  s1, s2, count(d) as weight
+MERGE
+  (s1)-[d:DEPENDS_ON]->(s2)
+SET
+  d.weight = weight
+RETURN
+  s1.name as Subdomain, weight as Weight, collect(s2.name) as Dependencies
+ORDER BY
+  Subdomain
+----
