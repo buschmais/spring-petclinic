@@ -481,6 +481,80 @@
         </pluginManagement>
       </build>
     </profile>
+      <profile>
+          <id>create-commit-testsuite</id>
+          <properties>
+              <cobertura.skip>true</cobertura.skip>
+          </properties>
+          <build>
+              <plugins>
+                  <plugin>
+                      <groupId>org.apache.maven.plugins</groupId>
+                      <artifactId>maven-surefire-plugin</artifactId>
+                      <configuration>
+                          <skip>true</skip>
+                      </configuration>
+                  </plugin>
+                  <plugin>
+                      <groupId>com.buschmais.jqassistant</groupId>
+                      <artifactId>jqassistant-maven-plugin</artifactId>
+                      <configuration>
+                          <concepts>
+                              <concept>test-impact-analysis:SurefireSuiteForLastGitCommit</concept>
+                          </concepts>
+                      </configuration>
+                  </plugin>
+              </plugins>
+          </build>
+      </profile>
+      <profile>
+          <id>create-branch-testsuite</id>
+          <properties>
+              <cobertura.skip>true</cobertura.skip>
+          </properties>
+          <build>
+              <plugins>
+                  <plugin>
+                      <groupId>org.apache.maven.plugins</groupId>
+                      <artifactId>maven-surefire-plugin</artifactId>
+                      <configuration>
+                          <skip>true</skip>
+                      </configuration>
+                  </plugin>
+                  <plugin>
+                      <groupId>com.buschmais.jqassistant</groupId>
+                      <artifactId>jqassistant-maven-plugin</artifactId>
+                      <configuration>
+                          <concepts>
+                              <concept>test-impact-analysis:SurefireSuiteForCurrentBranch</concept>
+                          </concepts>
+                      </configuration>
+                  </plugin>
+              </plugins>
+          </build>
+      </profile>
+      <profile>
+          <id>run-testsuite</id>
+          <build>
+              <plugins>
+                  <plugin>
+                      <groupId>org.apache.maven.plugins</groupId>
+                      <artifactId>maven-surefire-plugin</artifactId>
+                      <configuration>
+                          <includesFile>${session.executionRootDirectory}/target/jqassistant/report/surefire-suite/${project.artifactId}</includesFile>
+                      </configuration>
+                  </plugin>
+                  <plugin>
+                      <groupId>com.buschmais.jqassistant</groupId>
+                      <artifactId>jqassistant-maven-plugin</artifactId>
+                      <configuration>
+                          <skip>true</skip>
+                      </configuration>
+                  </plugin>
+              </plugins>
+          </build>
+      </profile>
+
   </profiles>
 
 </project>
